@@ -55,6 +55,9 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
   $scope.addNotebook = function(){
     var name = prompt('A Name for the Notebook?');
     if(!name) return;
+    if(!name.endsWith('.es.ipynb')){
+      name += '.es.ipynb'
+    }
     var notebook = {
      "cells": [
       {
@@ -124,7 +127,7 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
       return cell;
     })
     var text = JSON.stringify(notebook);
-    download(text, `${notebook.name}${notebook.name.endsWith('.js.ipynb') ? '' : '.js.ipynb'}`, 'text')
+    download(text, `${notebook.name}${notebook.name.endsWith('.es.ipynb') ? '' : '.es.ipynb'}`, 'text')
   }
 
   $scope.addCell = function(notebook){
