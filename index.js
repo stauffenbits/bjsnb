@@ -97,17 +97,6 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
   
   $scope.display = function(notebook){
     $scope.current = notebook;
-      
-    var elements = [...document.querySelectorAll('textarea.markdown.uninitialized')]
-    elements.forEach((element, i) => {
-        var editor = new Editor({
-          element: element
-        })
-        editor.render()
-        element.classList.remove('uninitialized');
-        editor.codemirror.setValue(notebook.cells[i].source.join('\n'));
-        notebook.cells[i].editor = editor;
-    })
   }
     
   $scope.run = function(cell, code){
@@ -131,12 +120,7 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
 
   $scope.downloadNotebook = function(notebook){
     notebook.cells = notebook.cells.map(cell => {
-      if(cell.cell_type === 'markdown'){
-        cell.source = cell.editor.codemirror.getValue().split(/\r?\n/);
-      }else{
-        cell.source = cell.cellSource.split(/\r?\n/);
-      }
-      delete cell.editor;
+      cell.source = cell.cellSource.split(/\r?\n/);
       return cell;
     })
     var text = JSON.stringify(notebook);
