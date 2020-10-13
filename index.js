@@ -55,7 +55,36 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
   $scope.addNotebook = function(){
     var name = prompt('A Name for the Notebook?');
     if(!name) return;
-    var notebook = {"cells":[], "metadata":{"kernelspec":{"display_name":"Browser Javascript","language":"javascript","name":"javascript"},"language_info":{"codemirror_mode":{"name":"javascript","version":3},"file_extension":".js","mimetype":"text/javascript","name":"javascript"}},"nbformat":4,"nbformat_minor":4,"name": name};
+    var notebook = {
+     "cells": [
+      {
+       "cell_type": "code",
+       "execution_count": null,
+       "metadata": {},
+       "outputs": [],
+       "source": []
+      }
+     ],
+     "metadata": {
+      "kernelspec": {
+       "display_name": "Browser Javascript",
+       "language": "ECMAScript",
+       "name": "Javascript"
+      },
+      "language_info": {
+       "codemirror_mode": {
+        "name": "ijsnb",
+        "version": 3
+       },
+       "file_extension": ".ijsnb",
+       "mimetype": "text/javascript",
+       "name": "javascript",
+       "version": "1.0.0"
+      }
+     },
+     "nbformat": 4,
+     "nbformat_minor": 4
+    };  
       
     $scope.storeNotebook(notebook);
     $scope.notebooks.push(notebook);
