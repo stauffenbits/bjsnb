@@ -131,7 +131,7 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
 
   $scope.downloadNotebook = function(notebook){
     notebook.cells = notebook.cells.map(cell => {
-      cell.source = cell.cellSource.split(/\r?\n/);
+      cell.source = cell.editor.codemirror.getValue().split(/\r?\n/);
       delete cell.editor;
       return cell;
     })
