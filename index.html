@@ -134,14 +134,14 @@
                                     <table class="table" ng-show="!collapsed_array">
                                         <thead>
                                             <tr>
-                                                <th scope="col-md-3">Index</th>
-                                                <th scope="col-md-9">Value</th>
+                                                <th scope="text-secondary">Index</th>
+                                                <th scope="text">Value</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr ng-repeat="value in cell.output[0] track by $index">
-                                                <td class="col-md-3 text-secondary">{{$index}}</td>
-                                                <td class="col-md-9 text">{{value}}</td>
+                                                <td class="text-secondary">{{$index}}</td>
+                                                <td class="text">{{value}}</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -161,14 +161,14 @@
                                     <table class="table" ng-show="!collapsed_object">
                                         <thead>
                                             <tr>
-                                                <th scope="col-md-3">Key</th>
-                                                <th scope="col-md-9">Value</th>
+                                                <th scope="text-secondary">Key</th>
+                                                <th scope="text">Value</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr ng-repeat="(key, value) in cell.output[0]">
-                                                <td class="col-md-3 text-secondary">{{key}}</td>
-                                                <td class="col-md-9 text">{{cell.output[0][key]}}</td>
+                                                <td class="text-secondary">{{key}}</td>
+                                                <td class="text">{{cell.output[0][key]}}</td>
                                             </tr>
                                         </tbody>
                                     </table>
