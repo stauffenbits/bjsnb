@@ -70,12 +70,12 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
     $scope.current = notebook;
       
     var elements = [...document.querySelectorAll('textarea.markdown.uninitialized')]
-    elements.forEach(element => {
+    elements.forEach((element, i) => {
         var editor = new Editor({
           element: element
         })
         element.classList.remove('uninitialized');
-        editor.codemirror.setValue();
+        editor.codemirror.setValue(notebook.cells[i].source.join('\n'));
     })
   }
     
