@@ -107,7 +107,7 @@
                                 </a>
                               
                                 <a
-                                    ng-name="#remove{{$index}}"
+                                    ng-name="remove{{$index}}"
                                     ng-href="#remove{{$index}}"
                                     class="link text-secondary text-right"
                                     ng-click="removeCell(notebook, cell)">
@@ -122,9 +122,9 @@
                                 <div ng-if="isArray(cell.output[0])" ng-init="collapsed_array = true" ng-show="isArray(cell.output[0])">
                                     [
                                     <a
-                                        ng-name="showHide{{$index}}"
-                                        ng-href="#showHide{{$index}}"
-                                        ng-class="link link-secondary"
+                                        ng-name="showHide{{$index}}" 
+                                        ng-href="#showHide{{$index}}" 
+                                        ng-class="link link-secondary" 
                                         ng-click="collapsed_array = !collapsed_array">
                                         <label ng-show="collapsed_array">+</label>
                                         <label ng-show="!collapsed_array">-</label>
@@ -149,9 +149,9 @@
                                 <div ng-if="isObject(cell.output[0]) && !isArray(cell.output[0])" ng-init="collapsed_object = true">
                                     [
                                     <a
-                                        ng-name="#showHide{{$index}}"
-                                        href="#showHide{{$index}}"
-                                        class="link link-secondary"
+                                        ng-name="showHide{{$index}}" 
+                                        ng-href="#showHide{{$index}}" 
+                                        class="link link-secondary" 
                                         ng-click="collapsed_object = !collapsed_object">
                                         <label ng-show="collapsed_object">+</label>
                                         <label ng-show="!collapsed_object">-</label>
@@ -175,8 +175,8 @@
                             </li>
                             <li class="list-group-item">
                                 <a 
-                                    name="#addCell{{$index}}}"
-                                    href="#addCell{{$index}}"
+                                    ng-name="addCell{{$index}}}"
+                                    ng-href="#addCell{{$index}}"
                                     class="link text-secondary"
                                     ng-click="addCell(notebook)">
                                     add cell
