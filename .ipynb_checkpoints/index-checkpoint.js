@@ -89,6 +89,8 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
      "nbformat_minor": 4
     };  
       
+    notebook.name = name;
+      
     $scope.storeNotebook(notebook);
     $scope.notebooks.push(notebook);
   }
