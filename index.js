@@ -81,7 +81,7 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
   $scope.run = function(cell, code){
     cell.source = code.split('\n')
     var result = window.eval(code);
-    cell.outputs = [result];
+    cell.output = [result];
     cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
     return result;
   }

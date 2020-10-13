@@ -84,11 +84,11 @@
                                 <a href="#" class="link text-secondary text-right" ng-click="removeCell(notebook, cell)">remove</a>
                                 
                                 <br>
-                                <label class="w-100 text-truncate" ng-if="cell.outputs[0]">
-                                    {{cell.outputs[0]}}
+                                <label class="w-100 text-truncate" ng-if="cell.output[0]">
+                                    {{cell.output[0]}}
                                 </label>
                                 
-                                <div ng-if="isArray(cell.outputs[0])" ng-init="collapsed_array = true" ng-show="isArray(cell.outputs[0])">
+                                <div ng-if="isArray(cell.output[0])" ng-init="collapsed_array = true" ng-show="isArray(cell.output[0])">
                                     [
                                     <a href="#" class="link link-secondary" ng-click="collapsed_array = !collapsed_array">
                                         <label ng-show="collapsed_array">+</label>
@@ -103,7 +103,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr ng-repeat="value in cell.outputs[0] track by $index">
+                                            <tr ng-repeat="value in cell.output[0] track by $index">
                                                 <td class="text-secondary">{{$index}}</td>
                                                 <td class="text">{{value}}</td>
                                             </tr>
@@ -111,7 +111,7 @@
                                     </table>
                                 </div>
                                 
-                                <div ng-if="isObject(cell.outputs[0]) && !isArray(cell.outputs[0])" ng-init="collapsed_object = true">
+                                <div ng-if="isObject(cell.output[0]) && !isArray(cell.output[0])" ng-init="collapsed_object = true">
                                     [
                                     <a href="#" class="link link-secondary" ng-click="collapsed_object = !collapsed_object">
                                         <label ng-show="collapsed_object">+</label>
@@ -127,9 +127,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr ng-repeat="(key, value) in cell.outputs[0]">
+                                            <tr ng-repeat="(key, value) in cell.output[0]">
                                                 <td class="text-secondary">{{key}}</td>
-                                                <td class="text">{{cell.outputs[0][key]}}</td>
+                                                <td class="text">{{cell.output[0][key]}}</td>
                                             </tr>
                                         </tbody>
                                     </table>
