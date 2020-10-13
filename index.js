@@ -103,8 +103,10 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
         var editor = new Editor({
           element: element
         })
+        editor.render()
         element.classList.remove('uninitialized');
         editor.codemirror.setValue(notebook.cells[i].source.join('\n'));
+        notebook.cells[i].editor = editor;
     })
   }
     
@@ -130,6 +132,7 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
   $scope.downloadNotebook = function(notebook){
     notebook.cells = notebook.cells.map(cell => {
       cell.source = cell.cellSource.split(/\r?\n/);
+      delete cell.editor;
       return cell;
     })
     var text = JSON.stringify(notebook);
