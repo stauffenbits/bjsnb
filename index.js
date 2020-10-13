@@ -76,7 +76,7 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
         "name": "ijsnb",
         "version": 3
        },
-       "file_extension": ".ijsnb",
+       "file_extension": ".js.ipynb",
        "mimetype": "text/javascript",
        "name": "javascript",
        "version": "1.0.0"
@@ -124,7 +124,7 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
       return cell;
     })
     var text = JSON.stringify(notebook);
-    download(text, `${notebook.name}${notebook.name.endsWith('.ijsnb') ? '' : '.ijsnb'}`, 'text')
+    download(text, `${notebook.name}${notebook.name.endsWith('.js.ipynb') ? '' : '.js.ipynb'}`, 'text')
   }
 
   $scope.addCell = function(notebook){
