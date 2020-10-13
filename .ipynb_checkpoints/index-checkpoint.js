@@ -80,7 +80,7 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
         "version": 3
        },
        "file_extension": ".es.ipynb",
-       "mimetype": "text/javascript",
+       "mimetype": "application/json",
        "name": "javascript",
        "version": "1.0.0"
       }
