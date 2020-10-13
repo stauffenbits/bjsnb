@@ -2,19 +2,19 @@
 <html ng-app="RSNBApp">
     <head>
         <title>ijsnb</title>
+
         <script src="/jquery.min.js"></script>
         <script src="/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="/bootstrap.min.css">
         <script src="/angular.min.js"></script>
         <script src="/download.js"></script>
         
-        <link rel="stylesheet" href="editor.css">
-        <script src="editor.js"></script>
-        <script src="marked.js"></script>
+        <link rel="stylesheet" href="/editor.css">
+        <script src="/editor.js"></script>
+        <script src="/marked.js"></script>
         
         <script src="/index.js"></script>
-        <link rel="stylesheet" href="/bootstrap.min.css">
-
-    <head>
+    </head>
     <body ng-controller="RSNBController">
         <div class="container">
             <div class="row">
@@ -95,11 +95,20 @@
                                         <label ng-show="!collapsed_array">-</label>
                                     </a>
                                     ]
-                                    <ol ng-show="!collapsed_array" class="list-group">
-                                        <li class="list-group-item" ng-repeat="item in cell.outputs[0] track by $index">
-                                            {{item}}
-                                        </li>
-                                    </ol>
+                                    <table class="table" ng-show="!collapsed_object">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Index</th>
+                                                <th scope="col">Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="value in cell.outputs[0] track by $index">
+                                                <td class="text-secondary">{{$index}}</td>
+                                                <td class="text">{{value}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                                 
                                 <div ng-if="isObject(cell.outputs[0]) && !isArray(cell.outputs[0])" ng-init="collapsed_object = true">

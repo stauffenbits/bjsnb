@@ -12,10 +12,6 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
   });
   
   $scope.storeNotebook = function(notebook){
-      notebook.cells = notebook.cells.map(cell => {
-        cell.source = cell.cellSource.split(/\r?\n/);
-        delete cell.cellSource;
-      })
       window.localStorage.setItem(notebook.name, JSON.stringify(notebook));
   }
     
