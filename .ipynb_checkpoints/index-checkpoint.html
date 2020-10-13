@@ -18,13 +18,14 @@
     <body ng-controller="RSNBController">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-3">
                     <form class="form">
                         <input class="form-control" type="file" name="files[]" multiple />
                         <button ng-click="upload()" class="form-control link text-secondary">Upload Notebook</button>
                         <button ng-click="addNotebook()" class="form-control link text-secondary">New Notebook</button>
                     </form>
-                    <br>
+                </div>
+                <div class="col-md-9">
                     <ul
                         ng-init="collapse = true" 
                         class="list-group" 
