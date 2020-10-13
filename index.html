@@ -86,8 +86,7 @@
                                     rows="{{Math.max(5, cell.source.length)}}"
                                     ng-init="cell.cellSource = cell.source.join('\n')"
                                     ng-model="cell.cellSource" 
-                                    class="form-control"
-                                    ng-input="this.height = cell.cellSource.split('\n').length">
+                                    class="form-control">
                                 </textarea>
                                 
                                 <textarea 
@@ -96,8 +95,7 @@
                                     rows="{{Math.max(5, cell.source.length)}}"
                                     ng-init="cell.cellSource = cell.source.join('\n')"
                                     ng-model="cell.cellSource" 
-                                    class="form-control markdown uninitialized"
-                                    ng-input="this.height = cell.cellSource.split('\n').length">
+                                    class="form-control markdown uninitialized">
                                 </textarea>
                                 
                                 <a 
