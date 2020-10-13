@@ -129,12 +129,12 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
 
   $scope.addCell = function(notebook){
     notebook.cells.push({
-      cell_type: "code",
-      execution_count: null,
-      metadata: {},
-      outputs: [],
-      source: [""]
-    })
+       "cell_type": "code",
+       "execution_count": null,
+       "metadata": {},
+       "outputs": [],
+       "source": []
+      })
   }
 
   $scope.removeCell = function(notebook, cell){
