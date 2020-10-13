@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html ng-app="RSNBApp">
     <head>
-        <title>RS NB</title>
-        <script src="/node_modules/remotestoragejs/release/remotestorage.js"></script>
-        <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="/node_modules/angular/angular.min.js"></script>
+        <title>ijsnb</title>
+        <script src="/jquery.min.js"></script>
+        <script src="/bootstrap.bundle.min.js"></script>
+        <script src="/angular.min.js"></script>
         <script src="/download.js"></script>
         
         <link rel="stylesheet" href="editor.css">
@@ -13,7 +12,7 @@
         <script src="marked.js"></script>
         
         <script src="/index.js"></script>
-        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/bootstrap.min.css">
 
     <head>
     <body ng-controller="RSNBController">
@@ -26,7 +25,7 @@
                         <button ng-click="addNotebook()" class="form-control link text-secondary">New Notebook</button>
                     </form>
                     <br>
-                    <ul 
+                    <ul
                         ng-init="collapse = true" 
                         class="list-group" 
                         ng-repeat="notebook in notebooks track by $index">
@@ -124,14 +123,14 @@
                                                 <td class="text">{{cell.outputs[0][key]}}</td>
                                             </tr>
                                         </tbody>
-                                    </table
+                                    </table>
                                 </div>
                             </li>
                             <li class="list-group-item">
                                 <a href="#" class="link text-secondary" ng-click="addCell(notebook)">add cell</a>
                             </li>
-                        <ul>
-                    </form>
+                        </form>
+                    </ul>
                 </div>
             </div>
         </div>       
