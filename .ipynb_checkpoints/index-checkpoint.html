@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html ng-app="RSNBApp">
+    <head>
+        <title>RS NB</title>
+        <script src="/node_modules/remotestoragejs/release/remotestorage.js"></script>
+        <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/node_modules/angular/angular.min.js"></script>
+        <script src="/download.js"></script>
+        
+        <link rel="stylesheet" href="editor.css">
+        <script src="editor.js"></script>
+        <script src="marked.js"></script>
+        
+        <script src="/index.js"></script>
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <head>
+    <body ng-controller="RSNBController">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form">
+                        <input class="form-control" type="file" name="files[]" multiple />
+                        <button ng-click="upload()" class="form-control link text-secondary">Upload Notebook</button>
+                        <button ng-click="addNotebook()" class="form-control link text-secondary">New Notebook</button>
+                    </form>
+                    <br>
+                    <ul 
+                        ng-init="collapse = true" 
+                        class="list-group" 
+                        ng-repeat="notebook in notebooks track by $index">
+                        
+                        <a class="form-header" href="#" ng-click="collapse = !collapse">{{notebook.name}}</a>
+                        <form ng-show="!collapse" class="form">
+                            <li class="list-group-item">
+                                <a class="form-control link text-success" href="#" ng-click="runAll(notebook)">run all</a>
+                                <a class="form-control link text-secondary" href="#" ng-click="clearAll(notebook)">clear all</a>
+                                <a class="form-control link text-secondary" href="#" ng-click="removeNotebook(notebook)">remove</a>
+                                <a class="form-control link text-secondary" href="#" ng-click="storeNotebook(notebook)">save</a>
+                                <a class="form-control link text-secondary" href="#" ng-click="downloadNotebook(notebook)">download</a>
+                            </li>                          
+                            <li class="list-group-item" ng-repeat="cell in notebook.cells track by $index">
+                                <label>
+                                    <input type="radio" ng-model="cell.cell_type" value="code">
+                                    code
+                                </label>
+
+                                <label>
+                                    <input type="radio" ng-model="cell.cell_type" value="markdown" ng-click="markdownCell(cell, $index)">
+                                    markdown
+                                </label>
+
+                                <label>
+                                    <input type="radio" ng-model="cell.cell_type" value="raw">
+                                    raw
+                                </label>
+                                
+                                <textarea 
+                                    ng-if="cell.cell_type === 'code'"
+                                    style="font-family: mono"
+                                    cols="82" 
+                                    rows="{{Math.max(5, cell.source.length)}}"
+                                    ng-init="cell.cellSource = cell.source.join('')"
+                                    ng-model="cell.cellSource" 
+                                    class="form-control">
+                                </textarea>
+                                
+                                <textarea 
+                                    ng-if="cell.cell_type === 'markdown'"
+                                    cols="82" 
+                                    rows="{{Math.max(5, cell.source.length)}}"
+                                    ng-init="cell.cellSource = cell.source.join('')"
+                                    ng-model="cell.cellSource" 
+                                    class="form-control markdown">
+                                </textarea>
+                                
+                                <a 
+                                    href="#" 
+                                    class="link text-success text-right" 
+                                    ng-click="run(cell, cell.cellSource || cell.source.join(''))">
+                                  run
+                                </a>
+                              
+                                <a href="#" class="link text-secondary text-right" ng-click="removeCell(notebook, cell)">remove</a>
+                                
+                                <br>
+                                <label class="w-100 text-truncate" ng-if="cell.outputs[0]">
+                                    {{cell.outputs[0]}}
+                                </label>
+                                
+                                <div ng-if="isArray(cell.outputs[0])" ng-init="collapsed_array = true" ng-show="isArray(cell.outputs[0])">
+                                    [
+                                    <a href="#" class="link link-secondary" ng-click="collapsed_array = !collapsed_array">
+                                        <label ng-show="collapsed_array">+</label>
+                                        <label ng-show="!collapsed_array">-</label>
+                                    </a>
+                                    ]
+                                    <ol ng-show="!collapsed_array" class="list-group">
+                                        <li class="list-group-item" ng-repeat="item in cell.outputs[0] track by $index">
+                                            {{item}}
+                                        </li>
+                                    </ol>
+                                </div>
+                                
+                                <div ng-if="isObject(cell.outputs[0]) && !isArray(cell.outputs[0])" ng-init="collapsed_object = true">
+                                    [
+                                    <a href="#" class="link link-secondary" ng-click="collapsed_object = !collapsed_object">
+                                        <label ng-show="collapsed_object">+</label>
+                                        <label ng-show="!collapsed_object">-</label>
+                                    </a>
+                                    ]
+                                    <table class="table" ng-show="!collapsed_object">
+                                        
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Key</th>
+                                                <th scope="col">Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="(key, value) in cell.outputs[0]">
+                                                <td class="text-secondary">{{key}}</td>
+                                                <td class="text">{{cell.outputs[0][key]}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#" class="link text-secondary" ng-click="addCell(notebook)">add cell</a>
+                            </li>
+                        <ul>
+                    </form>
+                </div>
+            </div>
+        </div>       
+    </body>
+</html>
