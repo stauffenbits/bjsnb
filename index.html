@@ -91,12 +91,12 @@
                                 
                                 <div ng-if="isArray(cell.output[0])" ng-init="collapsed_array = true" ng-show="isArray(cell.output[0])">
                                     [
-                                    <a name="#showHide{{$index}}" href="#showHide{{$index}}" class="link link-secondary" ng-click="collapsed_array = !collapsed_array">
+                                    <a ng-name="showHide{{$index}}" href="#showHide{{$index}}" class="link link-secondary" ng-click="collapsed_array = !collapsed_array">
                                         <label ng-show="collapsed_array">+</label>
                                         <label ng-show="!collapsed_array">-</label>
                                     </a>
                                     ]
-                                    <table class="table" ng-show="!collapsed_object">
+                                    <table class="table" ng-show="!collapsed_array">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Index</th>
