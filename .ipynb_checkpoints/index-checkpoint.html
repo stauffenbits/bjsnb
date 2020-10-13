@@ -60,7 +60,7 @@
                                     style="font-family: mono"
                                     cols="82" 
                                     rows="{{Math.max(5, cell.source.length)}}"
-                                    ng-init="cell.cellSource = cell.source.join('')"
+                                    ng-init="cell.cellSource = cell.source.join('\n')"
                                     ng-model="cell.cellSource" 
                                     class="form-control">
                                 </textarea>
@@ -69,9 +69,9 @@
                                     ng-if="cell.cell_type === 'markdown'"
                                     cols="82" 
                                     rows="{{Math.max(5, cell.source.length)}}"
-                                    ng-init="cell.cellSource = cell.source.join('')"
+                                    ng-init="cell.cellSource = cell.source.join('\n')"
                                     ng-model="cell.cellSource" 
-                                    class="form-control markdown">
+                                    class="form-control markdown uninitialized">
                                 </textarea>
                                 
                                 <a 

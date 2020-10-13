@@ -25,13 +25,6 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
     
   $scope.loadNotebooks();
     
-    
-  $scope.markdownCell = function(cell){
-      new Editor({
-          element: document.getElementById(`textarea.markdown`),
-      })
-  }
-    
   $scope.upload = function(){
     var form = document.querySelector("form");
     form.addEventListener('submit', async (e) => {
@@ -65,7 +58,6 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
     var notebook = {"cells":[], "metadata":{"kernelspec":{"display_name":"Browser Javascript","language":"javascript","name":"javascript"},"language_info":{"codemirror_mode":{"name":"javascript","version":3},"file_extension":".js","mimetype":"text/javascript","name":"javascript"}},"nbformat":4,"nbformat_minor":4,"name": name};
       
     $scope.storeNotebook(notebook);
-
     $scope.notebooks.push(notebook);
   }
 
@@ -76,6 +68,15 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
   
   $scope.display = function(notebook){
     $scope.current = notebook;
+      
+    var elements = [...document.querySelectorAll('textarea.markdown.uninitialized')]
+    elements.forEach(element => {
+        var editor = new Editor({
+          element: element
+        })
+        element.classList.remove('uninitialized');
+        editor.codemirror.setValue();
+    })
   }
     
   $scope.run = function(cell, code){
