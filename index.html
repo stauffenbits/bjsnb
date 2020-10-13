@@ -87,7 +87,7 @@
                                     ng-init="cell.cellSource = cell.source.join('\n')"
                                     ng-model="cell.cellSource" 
                                     class="form-control"
-                                    oninput="this.height=''">
+                                    ng-input="this.height = cell.cellSource.split('\n').length">
                                 </textarea>
                                 
                                 <textarea 
@@ -97,7 +97,7 @@
                                     ng-init="cell.cellSource = cell.source.join('\n')"
                                     ng-model="cell.cellSource" 
                                     class="form-control markdown uninitialized"
-                                    oninput="this.height = ''">
+                                    ng-input="this.height = cell.cellSource.split('\n').length">
                                 </textarea>
                                 
                                 <a 
