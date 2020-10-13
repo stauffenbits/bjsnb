@@ -76,10 +76,10 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
       },
       "language_info": {
        "codemirror_mode": {
-        "name": "js.ipynb",
+        "name": "es.ipynb",
         "version": 3
        },
-       "file_extension": ".js.ipynb",
+       "file_extension": ".es.ipynb",
        "mimetype": "text/javascript",
        "name": "javascript",
        "version": "1.0.0"
