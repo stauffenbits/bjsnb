@@ -104,7 +104,7 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
       return cell;
     })
     var text = JSON.stringify(notebook);
-    download(text, `${notebook.name}${notebook.name.endsWith('.ipynb') ? '' : '.ipynb'}`, 'text')
+    download(text, `${notebook.name}${notebook.name.endsWith('.ijsnb') ? '' : '.ijsnb'}`, 'text')
   }
 
   $scope.addCell = function(notebook){

@@ -33,11 +33,11 @@
                         <a class="form-header" href="#" ng-click="collapse = !collapse">{{notebook.name}}</a>
                         <form ng-show="!collapse" class="form">
                             <li class="list-group-item">
-                                <a class="form-control link text-success" href="#" ng-click="runAll(notebook)">run all</a>
+                                <a class="form-control link text-success" name="#runAll{{$index}}" href="#runAll{{$index}}" ng-click="runAll(notebook)">run all</a>
                                 <!--<a class="form-control link text-secondary" href="#" ng-click="clearAll(notebook)">clear all</a>-->
-                                <a class="form-control link text-secondary" href="#" ng-click="removeNotebook(notebook)">remove</a>
-                                <a class="form-control link text-secondary" href="#" ng-click="storeNotebook(notebook)">save</a>
-                                <a class="form-control link text-secondary" href="#" ng-click="downloadNotebook(notebook)">download</a>
+                                <a class="form-control link text-secondary" name="#remove{{$index}}" href="#{{$index}}" ng-click="removeNotebook(notebook)">remove</a>
+                                <a class="form-control link text-secondary" name="#save{{$index}}" href="#save{{$index}}" ng-click="storeNotebook(notebook)">save</a>
+                                <a class="form-control link text-secondary" name="download{{$index}}" href="#download{{$index}}" ng-click="downloadNotebook(notebook)">download</a>
                             </li>                          
                             <li class="list-group-item" ng-repeat="cell in notebook.cells track by $index">
                                 <label>
@@ -75,13 +75,14 @@
                                 </textarea>
                                 
                                 <a 
-                                    href="#" 
+                                    name="#run{{$index}}"
+                                    href="#run{{$index}}" 
                                     class="link text-success text-right" 
                                     ng-click="run(cell, cell.cellSource || cell.source.join(''))">
                                   run
                                 </a>
                               
-                                <a href="#" class="link text-secondary text-right" ng-click="removeCell(notebook, cell)">remove</a>
+                                <a name="#remove{{$index}}" href="#remove{{$index}}" class="link text-secondary text-right" ng-click="removeCell(notebook, cell)">remove</a>
                                 
                                 <br>
                                 <label class="w-100 text-truncate" ng-if="cell.output[0]">
@@ -90,7 +91,7 @@
                                 
                                 <div ng-if="isArray(cell.output[0])" ng-init="collapsed_array = true" ng-show="isArray(cell.output[0])">
                                     [
-                                    <a href="#" class="link link-secondary" ng-click="collapsed_array = !collapsed_array">
+                                    <a name="#showHide{{$index}}" href="#showHide{{$index}}" class="link link-secondary" ng-click="collapsed_array = !collapsed_array">
                                         <label ng-show="collapsed_array">+</label>
                                         <label ng-show="!collapsed_array">-</label>
                                     </a>
@@ -113,13 +114,12 @@
                                 
                                 <div ng-if="isObject(cell.output[0]) && !isArray(cell.output[0])" ng-init="collapsed_object = true">
                                     [
-                                    <a href="#" class="link link-secondary" ng-click="collapsed_object = !collapsed_object">
+                                    <a ng-name="#showHide{{$index}}" href="#showHide{{$index}}" class="link link-secondary" ng-click="collapsed_object = !collapsed_object">
                                         <label ng-show="collapsed_object">+</label>
                                         <label ng-show="!collapsed_object">-</label>
                                     </a>
                                     ]
                                     <table class="table" ng-show="!collapsed_object">
-                                        
                                         <thead>
                                             <tr>
                                                 <th scope="col">Key</th>
@@ -136,7 +136,7 @@
                                 </div>
                             </li>
                             <li class="list-group-item">
-                                <a href="#" class="link text-secondary" ng-click="addCell(notebook)">add cell</a>
+                                <a name="#addCell{{$index}}}" href="#addCell{{$index}}" class="link text-secondary" ng-click="addCell(notebook)">add cell</a>
                             </li>
                         </form>
                     </ul>
