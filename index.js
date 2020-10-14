@@ -149,7 +149,8 @@ var RSNBController = RSNBApp.controller("RSNBController",
   $scope.display = function(notebook){
     if(!notebook) return;
     $scope.current = notebook;
-    $scope.initAllMarkdownCells(notebook);
+    // $scope.initAllMarkdownCells(notebook);
+    // $scope.initAllCodeCells(notebook)
   }
 
   $scope.loadNotebooks = function(){
@@ -253,8 +254,8 @@ var RSNBController = RSNBApp.controller("RSNBController",
     notebook.name = name;
       
     $scope.notebooks.push(notebook);
-    $scope.initAllMarkdownCells(notebook);
-    $scope.initAllCodeCells(notebook);
+    // $scope.initAllMarkdownCells(notebook);
+    // $scope.initAllCodeCells(notebook);
 
     $scope.storeNotebook(notebook);
     $scope.display(notebook);
@@ -334,15 +335,15 @@ var RSNBController = RSNBApp.controller("RSNBController",
       .then(response => {
         var notebook = response.data;
         $scope.storeNotebook(notebook);
-        $scope.display(notebook)
+        $scope.loadNotebooks();
       });
     
       window.localStorage.setItem('initialized', true);
     }
       
-    $scope.notebooks.forEach((notebook, i) => {
-      $scope.initAllCodeCells(notebook);
-      $scope.initAllMarkdownCells(notebook);
-    })
+    // $scope.notebooks.forEach((notebook, i) => {
+    //  $scope.initAllCodeCells(notebook);
+    //  $scope.initAllMarkdownCells(notebook);
+    // })
   }
 }])

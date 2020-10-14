@@ -20,7 +20,9 @@
                         class="list-group" 
                         ng-repeat="notebook in notebooks track by $index">
                         
-                        <a class="form-header" href="#" ng-click="collapse = !collapse; display(notebook);">{{notebook.name}}</a>
+                        <li class="list-group-item">
+                            <a class="h3 form-header" href="#" ng-click="collapse = !collapse; display(notebook);">{{notebook.name}}</a>
+                        </li>
                         <form ng-show="!collapse" class="form notebook notebook{{$index}}" ng-init="notebook.index = $index">
                             <li class="list-group-item">
                                 <a 
@@ -58,8 +60,7 @@
                                     <input 
                                       type="radio"
                                       ng-model="cell.cell_type"
-                                      value="code"
-                                      ng-click="initCodeCell(notebook.index, cell.index)">
+                                      value="code">
                                     code
                                 </label>
 
@@ -67,31 +68,30 @@
                                     <input 
                                       type="radio"
                                       ng-model="cell.cell_type"
-                                      value="markdown"
-                                      ng-click="initMarkdownCell(notebook.index, cell.index)">
+                                      value="markdown">
                                     markdown
                                 </label>
                                 <br>
                                 
-                                <textarea ui-codemirror-opts="cell.editorOptions"
+                                <textarea ui-codemirror ui-codemirror-opts="{mode: 'javascript', theme: 'eclipse'}"
                                     ng-if="cell.cell_type === 'code'"
                                     style="font-family: mono"
                                     cols="82" 
                                     rows="{{cell.source.length}}"
-                                    ng-init="cell.cellSource = cell.source.join(''); initCodeCell(notebook.index, cell.index);"
+                                    ng-init="cell.cellSource = cell.source.join('');"
                                     ng-model="cell.cellSource" 
                                     class="form-control cell code cell{{$index}}"
-                                    ng-keyup="cell.source = cell.editor.codemirror.getValue().split(newline);">
+                                    ng-keyup="cell.source = cell.cellSource.split(newline);">
                                 </textarea>
                                 
-                                <textarea ui-codemirror-opts="cell.editorOptions"
+                                <textarea ui-codemirror ui-codemirror-opts="{mode: 'markdown', theme: 'eclipse'}"
                                     ng-if="cell.cell_type === 'markdown'"
                                     cols="82" 
                                     rows="cell.source.length"
                                     ng-model="cell.cellSource"
-                                    ng-init="cell.cellSource = cell.source.join(''); initMarkdownCell(notebook.index, cell.index);"
+                                    ng-init="cell.cellSource = cell.source.join('');"
                                     class="form-control cell markdown cell{{$index}}"
-                                    ng-keyup="cell.source = cell.editor.codemirror.getValue().split(newline);">
+                                    ng-keyup="cell.source = cell.cellSource.split(newline);">
                                 </textarea>
                                 
                                 <br>
@@ -196,10 +196,6 @@
         
         <script src="angular.min.js"></script>
         <script src="download.js"></script>
-        
-        <link rel="stylesheet" href="editor.css">
-        <script src="editor.js"></script>
-        <script src="marked.js"></script>
         
         <script src="codemirror.js"></script>
         <link rel="stylesheet" href="codemirror.css">
