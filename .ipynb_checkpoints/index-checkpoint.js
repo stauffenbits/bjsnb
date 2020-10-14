@@ -1,6 +1,8 @@
 var RSNBApp = angular.module('RSNBApp', []);
 
-var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$sce", function($scope, $http, $sce){
+var RSNBController = RSNBApp.controller("RSNBController", 
+  ["$scope", "$http", "$sce", "$element", "$document",
+  function($scope, $http, $sce, $element, $document){
   $scope.notebooks = []
   $scope.current = null;
     
@@ -102,10 +104,11 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
   
   $scope.display = function(notebook){
     $scope.current = notebook;
+    
   }
     
   $scope.run = function(cell, code){
-    cell.source = code.split('\n')
+    cell.source = code.split(/\r?\n/);
     var result = window.eval(code);
     cell.output = [result];
     cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
@@ -152,6 +155,22 @@ var RSNBController = RSNBApp.controller("RSNBController", ["$scope", "$http", "$
     
   $scope.isArray = function(potArr){
     return potArr instanceof Array;
+  }
+    
+  $scope.initMarkdownCell = function(nbIndex, cellIndex){
+    var elem = document.querySelector(`.notebook${nbIndex} * .cell${cellIndex}`);
+    console.log('elem', elem)
+      
+    var cell = $scope.notebooks[nbIndex].cells[cellIndex];
+    
+    cell.editor = new Editor({
+      element: document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`)
+    });
+      
+    elem.style.hidden = true;
+    
+    cell.editor.render();
+    cell.editor.codemirror.setValue(cell.cellSource || '');
   }
 
 }])

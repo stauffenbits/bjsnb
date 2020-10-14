@@ -32,7 +32,7 @@
                         ng-repeat="notebook in notebooks track by $index">
                         
                         <a class="form-header" href="#" ng-click="collapse = !collapse">{{notebook.name}}</a>
-                        <form ng-show="!collapse" class="form">
+                        <form ng-show="!collapse" class="form notebook notebook{{$index}}" ng-init="notebook.index = $index">
                             <li class="list-group-item">
                                 <a 
                                     class="form-control link text-success"
@@ -64,14 +64,14 @@
                                     download
                                 </a>
                             </li>                          
-                            <li class="list-group-item" ng-repeat="cell in notebook.cells track by $index">
+                            <li class="list-group-item" ng-repeat="cell in notebook.cells track by $index" ng-init="cell.index = $index">
                                 <label>
                                     <input type="radio" ng-model="cell.cell_type" value="code">
                                     code
                                 </label>
 
                                 <label>
-                                    <input type="radio" ng-model="cell.cell_type" value="markdown" ng-click="markdownCell(cell, $index)">
+                                    <input type="radio" ng-model="cell.cell_type" value="markdown" ng-click="initMarkdownCell(notebook.index, cell.index)">
                                     markdown
                                 </label>
 
@@ -79,25 +79,6 @@
                                     <input type="radio" ng-model="cell.cell_type" value="raw">
                                     raw
                                 </label>
-                                
-                                <textarea 
-                                    ng-if="cell.cell_type === 'code'"
-                                    style="font-family: mono"
-                                    cols="82" 
-                                    rows="{{Math.max(5, cell.source.length)}}"
-                                    ng-init="cell.cellSource = cell.source.join('\n')"
-                                    ng-model="cell.cellSource" 
-                                    class="form-control code uninitlialized">
-                                </textarea>
-                                
-                                <textarea 
-                                    ng-if="cell.cell_type === 'markdown'"
-                                    cols="82" 
-                                    rows="{{Math.max(5, cell.source.length)}}"
-                                    ng-init="cell.cellSource = cell.source.join('\n')"
-                                    ng-model="cell.cellSource" 
-                                    class="form-control markdown uninitialized">
-                                </textarea>
                                 
                                 <a 
                                     name="#run{{$index}}"
@@ -114,6 +95,25 @@
                                     ng-click="removeCell(notebook, cell)">
                                     remove
                                 </a>
+                                <br>
+                                
+                                <textarea 
+                                    ng-show="cell.cell_type === 'code'"
+                                    style="font-family: mono"
+                                    cols="82" 
+                                    rows="{{Math.max(5, cell.source.length)}}"
+                                    ng-init="cell.cellSource = cell.source.join('\n')"
+                                    ng-model="cell.cellSource" 
+                                    class="form-control cell cell{{$index}} code uninitlialized">
+                                </textarea>
+                                
+                                <textarea 
+                                    ng-show="cell.cell_type === 'markdown'"
+                                    cols="82" 
+                                    rows="cell.source.length"
+                                    ng-model="cell.cellSource" 
+                                    class="form-control cell cell{{$index}} markdown uninitialized">
+                                </textarea>
                                 
                                 <br>
                                 <label class="w-100 text-truncate" ng-if="cell.output[0]">
