@@ -19,7 +19,7 @@
                         class="list-group" 
                         ng-repeat="notebook in notebooks track by $index">
                         
-                        <a class="form-header" href="#" ng-click="collapse = !collapse; current = notebook;">{{notebook.name}}</a>
+                        <a class="form-header" href="#" ng-click="collapse = !collapse; display(notebook);">{{notebook.name}}</a>
                         <form ng-show="!collapse" class="form notebook notebook{{$index}}" ng-init="notebook.index = $index">
                             <li class="list-group-item">
                                 <a 

@@ -14,25 +14,25 @@ var RSNBController = RSNBApp.controller("RSNBController",
   });
   
   $scope.storeNotebook = function(notebook){
-      var nb = Object.assign({}, notebook)
-      nb.cells = nb.cells.map((cell, i) => {
-        switch(cell.cell_type){
-        case 'markdown':
-          cell.source = (cell.editor ? cell.editor.codemirror.getValue().split(/\n/) : cell.cellSource.split(/\n/));
-          if(cell.editor){
-            delete cell.editor;
-          }
-          break;
-        case 'code':
-          cell.source = cell.cellSource !== undefined ? cell.cellSource.split(/\n/) : cell.source;
-          if(cell.cellSource){
-            delete cell.cellSource;
-          }
-          break;
-        }
-        return cell;
-      })
-      window.localStorage.setItem(notebook.name, JSON.stringify(notebook));
+    if(!notebook){
+      notebook = $scope.current;
+    }
+      
+    var nb = Object.assign({}, notebook);
+    nb.cells = nb.cells.map((cell, i) => {
+      var copy = Object.assign({}, cell, {
+        editor: undefined, 
+        cellSource: undefined,
+        source: cell.cell_type == 'markdown' ? 
+          cell.editor.codemirror.getValue().split(/\n/) :
+          cell.source
+      });
+        
+      return copy
+    });
+    
+    console.log(nb);
+    window.localStorage.setItem(notebook.name, JSON.stringify(nb));
   }
       
   $scope.initMarkdownCell = function(nbIndex, cellIndex){
@@ -40,14 +40,14 @@ var RSNBController = RSNBApp.controller("RSNBController",
     if(!elem) return;
       
     var cell = $scope.notebooks[nbIndex].cells[cellIndex];
-    cell.cellSource = cell.source.join('\n'); 
+    if(!cell) return;
     
     if(!cell.editor){
       cell.editor = new Editor({lineWrapping: true});
     }
       
     cell.editor.render(document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`));
-    cell.editor.codemirror.setValue(cell.cellSource || '');
+    cell.editor.codemirror.setValue(cell.source.join('\n'));
   }
       
   $scope.initAllMarkdownCells = function(notebook){
@@ -56,28 +56,30 @@ var RSNBController = RSNBApp.controller("RSNBController",
     }
       
     for(var i=0; i<notebook.cells.length; i++){
-      $scope.initMarkdownCell(notebook.index, i)
+      $scope.initMarkdownCell(notebook.index, i);
     }
   }
       
   $scope.display = function(notebook){
     if(!notebook) return;
     $scope.current = notebook;
+    $scope.initAllMarkdownCells(notebook)
   }
     
   $scope.loadNotebooks = function(){
     $scope.notebooks = [];
     var notebookNames = Object.keys(window.localStorage);
-    notebookNames.forEach((name, i) => {
-      var notebook = JSON.parse(localStorage.getItem(name));
+    for(var i=0; i<notebookNames.length; i++){
+      var notebook = JSON.parse(localStorage.getItem(notebookNames[i]));
       if(!notebook) return;
       $scope.notebooks.push(notebook);
-    })
-    
-    var notebooks = $scope.notebooks;
+    }
       
-    for(var i=0; i<notebooks.length; i++){
-      $scope.initAllMarkdownCells(notebooks[i])
+    for(var i=0; i<$scope.notebooks.length; i++){
+      for(var j=0; j<$scope.notebooks[i].cells.length; j++){
+        
+        $scope.initMarkdownCell(i, j);
+      }
     }
   }
     
@@ -149,8 +151,10 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     notebook.name = name;
       
-    $scope.storeNotebook(notebook);
     $scope.notebooks.push(notebook);
+    $scope.initAllMarkdownCells(notebook);
+
+    $scope.storeNotebook(notebook);
   }
 
   $scope.removeNotebook = function(notebook){
