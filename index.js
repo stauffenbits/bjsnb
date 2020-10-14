@@ -60,6 +60,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
     
   $scope.loadNotebooks = function(){
+    $scope.notebooks = [];
     var notebookNames = Object.keys(window.localStorage);
     notebookNames.forEach((name, i) => {
       var notebook = JSON.parse(localStorage.getItem(name));
