@@ -18,13 +18,13 @@ var RSNBController = RSNBApp.controller("RSNBController",
       nb.cells = nb.cells.map((cell, i) => {
         switch(cell.cell_type){
         case 'markdown':
-          cell.source = cell.editor ? cell.editor.codemirror.getValue().split(/\r?\n/) : [];
+          cell.source = cell.editor ? cell.editor.codemirror.getValue().split(/\n/) : cell.cellSource.split(/\n/);
           if(cell.editor){
             delete cell.editor;
           }
           break;
         case 'code':
-          cell.source = cell.cellSource ? cell.cellSource.split(/\r?\n/) : [];
+          cell.source = cell.cellSource ? cell.cellSource.split(/\n/) : cell.cellSource.split(/\n/);
           if(cell.cellSource){
             delete cell.cellSource;
           }
@@ -40,6 +40,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     if(!elem) return;
       
     var cell = $scope.notebooks[nbIndex].cells[cellIndex];
+    cell.cellSource = cell.source.join('\n'); 
     
     if(!cell.editor){
       cell.editor = new Editor({lineWrapping: true});
@@ -50,7 +51,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
       
   $scope.initAllMarkdownCells = function(notebook){
-    for(var i=0; i<notebooks.length; i++){
+    for(var i=0; i<notebook.cells.length; i++){
       $scope.initMarkdownCell(notebook.index, i)
     }
   }
@@ -68,6 +69,12 @@ var RSNBController = RSNBApp.controller("RSNBController",
       if(!notebook) return;
       $scope.notebooks.push(notebook);
     })
+    
+    var notebooks = $scope.notebooks;
+      
+    for(var i=0; i<notebooks.length; i++){
+      $scope.initAllMarkdownCells(notebooks[i])
+    }
   }
     
   $scope.loadNotebooks();
@@ -149,7 +156,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     
   $scope.run = function(cell, code){
     if(cell.cell_type != 'code') return;
-    cell.source = code.split(/\r?\n/);
+    cell.source = code.split(/\n/);
     var result = window.eval(code);
     cell.output = [result];
     cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
@@ -171,7 +178,11 @@ var RSNBController = RSNBApp.controller("RSNBController",
 
   $scope.downloadNotebook = function(notebook){
     notebook.cells = notebook.cells.map(cell => {
-      cell.source = cell.cellSource.split(/\r?\n/);
+      if(cell.editor){
+        cell.cellSource = cell.editor.codemirror.getValue();
+      }
+      
+      cell.source = cell.cellSource.split(/\n/);
       delete cell.editor;
       return cell;
     })

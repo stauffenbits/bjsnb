@@ -59,7 +59,11 @@
                                 </label>
 
                                 <label>
-                                    <input type="radio" ng-model="cell.cell_type" value="markdown" ng-click="initMarkdownCell(notebook.index, cell.index)">
+                                    <input 
+                                      type="radio"
+                                      ng-model="cell.cell_type"
+                                      value="markdown"
+                                      ng-click="initMarkdownCell(notebook.index, cell.index)">
                                     markdown
                                 </label>
 
@@ -73,7 +77,7 @@
                                     name="#run{{$index}}"
                                     href="#run{{$index}}" 
                                     class="link text-success text-right" 
-                                    ng-click="run(cell, cell.cellSource || cell.source.join(''))">
+                                    ng-click="run(cell, cell.cellSource || cell.source.join('\n'))">
                                   run
                                 </a>
                               
@@ -87,22 +91,22 @@
                                 <br>
                                 
                                 <textarea 
-                                    ng-show="cell.cell_type === 'code'"
+                                    ng-if="cell.cell_type === 'code'"
                                     style="font-family: mono"
                                     cols="82" 
                                     rows="{{cell.source.length}}"
                                     ng-init="cell.cellSource = cell.source.join('\n')"
                                     ng-model="cell.cellSource" 
-                                    class="form-control cell cell{{$index}} code uninitialized">
+                                    class="form-control cell code cell{{$index}}">
                                 </textarea>
                                 
                                 <textarea 
-                                    ng-show="cell.cell_type === 'markdown'"
+                                    ng-if="cell.cell_type === 'markdown'"
                                     cols="82" 
                                     rows="cell.source.length"
-                                    ng-init="cell.cellSource = cell.source.join('\n'); initMarkdownCell(notebook.index, cell.index);"
                                     ng-model="cell.cellSource"
-                                    class="form-control cell cell{{$index}} markdown uninitialized">
+                                    class="form-control cell markdown cell{{$index}}"
+                                    ng-init="initMarkdownCell(notebook.index, cell.index);">
                                 </textarea>
                                 
                                 <br>
