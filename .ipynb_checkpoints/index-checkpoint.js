@@ -3,8 +3,12 @@ var RSNBApp = angular.module('RSNBApp', ['ui.codemirror']);
 var RSNBController = RSNBApp.controller("RSNBController", 
   ["$scope", "$http", "$sce", "$element", "$document",
   function($scope, $http, $sce, $element, $document){
-  $scope.notebooks = []
+  $scope.notebooks = [];
   $scope.current = null;
+      
+  $scope.reservedNames = [
+    'initialized', 
+  ];
       
   $scope.newline = '\n';
     
@@ -71,6 +75,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     if(!cell) return;
       
     if(cell.editor){
+      cell.editor.codemirror.getWrapperElement().remove();
       delete cell.editor;
       delete cell.editorOptions;
     }
@@ -100,6 +105,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     if(!cell) return;
       
     if(cell.editor){
+      cell.editor.codemirror.getWrapperElement().remove();
       delete cell.editor;
       delete cell.editorOptions;
     }
@@ -148,7 +154,11 @@ var RSNBController = RSNBApp.controller("RSNBController",
 
   $scope.loadNotebooks = function(){
     $scope.notebooks = [];
-    var notebookNames = Object.keys(window.localStorage);
+    
+      
+    var notebookNames = Object.keys(window.localStorage).filter(name => {
+      return $scope.reservedNames.indexOf(name) === -1; 
+    });
     for(var i=0; i<notebookNames.length; i++){
       var notebook = JSON.parse(localStorage.getItem(notebookNames[i]));
       if(!notebook) return;
@@ -317,4 +327,22 @@ var RSNBController = RSNBApp.controller("RSNBController",
       }
     }
   });
+      
+  this.$onInit = function(){
+    if(!window.localStorage.getItem('initialized')){
+      $http.get('Greetings.es.ipynb', {})
+      .then(response => {
+        var notebook = response.data;
+        $scope.storeNotebook(notebook);
+        $scope.display(notebook)
+      });
+    
+      window.localStorage.setItem('initialized', true);
+    }
+      
+    $scope.notebooks.forEach((notebook, i) => {
+      $scope.initAllCodeCells(notebook);
+      $scope.initAllMarkdownCells(notebook);
+    })
+  }
 }])
