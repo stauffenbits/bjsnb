@@ -32,7 +32,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
           cellCopy.source = (cell.editor ? cell.editor.codemirror.getValue().split($scope.newline) : cell.source);
           break;
         case "code":
-          cellCopy.source = cell.cellSource.split($scope.newline);
+          cellCopy.source = cell.source || cell.cellSource.split($scope.newline);
           break;
         default:
           break;
@@ -42,7 +42,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
         if(line === ''){
           return ' ';
         }else{
-          return line;
+          return `${line}\n`;
         }
       });
       delete cellCopy.outputs;
@@ -168,7 +168,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       "language_info": {
        "codemirror_mode": {
         "name": "es.ipynb",
-        "version": 3
+        "version": 6
        },
        "file_extension": ".es.ipynb",
        "mimetype": "application/json",
@@ -186,11 +186,12 @@ var RSNBController = RSNBApp.controller("RSNBController",
     $scope.initAllMarkdownCells(notebook);
 
     $scope.storeNotebook(notebook);
-    $scope.display(notebook)
+    $scope.display(notebook);
   }
 
   $scope.removeNotebook = function(notebook){
-    window.localStorage.removeItem(notebook.name)
+    window.localStorage.removeItem(notebook.name);
+    $scope.current = null;
     $scope.loadNotebooks();
   }
     
