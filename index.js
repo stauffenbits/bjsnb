@@ -14,15 +14,56 @@ var RSNBController = RSNBApp.controller("RSNBController",
   });
   
   $scope.storeNotebook = function(notebook){
+      notebook.cells = notebook.cells.map((cell, i) => {
+        switch(cell.cell_type){
+        case 'markdown':
+          cell.source = cell.editor ? cell.editor.codemirror.getValue().split(/\r?\n/) : [];
+          delete cell.editor;
+          break;
+        case 'code':
+          cell.source = cell.cellSource ? cell.cellSource.split(/\r?\n/) : [];
+          delete cell.cellSource;
+          break;
+        }
+        return cell;
+      })
       window.localStorage.setItem(notebook.name, JSON.stringify(notebook));
+  }
+      
+  $scope.initMarkdownCell = function(nbIndex, cellIndex){
+    var elem = document.querySelector(`.notebook${nbIndex} * .cell${cellIndex}`);
+    console.log('elem', elem)
+      
+    var cell = $scope.notebooks[nbIndex].cells[cellIndex];
+    
+    cell.editor = new Editor({
+      element: document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`)
+    });
+      
+    cell.editor.render();
+    cell.editor.codemirror.setValue(cell.cellSource || '');
+  }
+      
+  $scope.display = function(notebook){
+    $scope.current = notebook;
+    $scope.current.cells.forEach(cell => {
+      switch(cell.cell_type){
+      case "markdown":
+        $scope.initMarkdownCell(notebook.index, cell.index);
+        break;
+      }
+    })
   }
     
   $scope.loadNotebooks = function(){
       var notebookNames = Object.keys(window.localStorage);
-      for(var name of notebookNames){
+      notebookNames.forEach((name, i) => {
           var notebook = JSON.parse(localStorage.getItem(name));
+          notebook.index = i;
+          notebook.cells.forEach((cell, j) => cell ? cell.index = j : null);
           $scope.notebooks.push(notebook)
-      }
+          $scope.display(notebook)
+      })
   }
     
   $scope.loadNotebooks();
@@ -99,12 +140,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
 
   $scope.removeNotebook = function(notebook){
     window.localStorage.removeItem(notebook.name)
-    $scope.notebooks = $scope.notebooks.splice($scope.notebooks.indexOf(notebook), 1);
-  }
-  
-  $scope.display = function(notebook){
-    $scope.current = notebook;
-    
+    $scope.loadNotebooks();
   }
     
   $scope.run = function(cell, code){
@@ -155,22 +191,6 @@ var RSNBController = RSNBApp.controller("RSNBController",
     
   $scope.isArray = function(potArr){
     return potArr instanceof Array;
-  }
-    
-  $scope.initMarkdownCell = function(nbIndex, cellIndex){
-    var elem = document.querySelector(`.notebook${nbIndex} * .cell${cellIndex}`);
-    console.log('elem', elem)
-      
-    var cell = $scope.notebooks[nbIndex].cells[cellIndex];
-    
-    cell.editor = new Editor({
-      element: document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`)
-    });
-      
-    elem.style.hidden = true;
-    
-    cell.editor.render();
-    cell.editor.codemirror.setValue(cell.cellSource || '');
   }
 
 }])
