@@ -63,9 +63,9 @@ var RSNBController = RSNBApp.controller("RSNBController",
   $scope.display = function(notebook){
     if(!notebook) return;
     $scope.current = notebook;
-    $scope.initAllMarkdownCells(notebook)
+    $scope.initAllMarkdownCells(notebook);
   }
-    
+
   $scope.loadNotebooks = function(){
     $scope.notebooks = [];
     var notebookNames = Object.keys(window.localStorage);
@@ -77,7 +77,6 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     for(var i=0; i<$scope.notebooks.length; i++){
       for(var j=0; j<$scope.notebooks[i].cells.length; j++){
-        
         $scope.initMarkdownCell(i, j);
       }
     }
@@ -210,7 +209,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     return potArr instanceof Array;
   }
       
-  $(window).bind('keydown', function(event) {
+  $(window).bind('keydown', function(event){
     if (event.ctrlKey || event.metaKey) {
       switch (String.fromCharCode(event.which).toLowerCase()) {
         case 's':
@@ -220,5 +219,4 @@ var RSNBController = RSNBApp.controller("RSNBController",
       }
     }
   });
-
 }])
