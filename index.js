@@ -71,16 +71,17 @@ var RSNBController = RSNBApp.controller("RSNBController",
     if(!cell) return;
       
     if(!cell.editor){
+      cell.editorOptions = {
+        value: cell.source.join(''),
+        mode:  "javascript",
+        lineNumbers: true
+      }
       cell.editor = {
-        codemirror: CodeMirror.fromTextArea(elem, {
-          value: cell.source.join($scope.newline),
-          mode:  "javascript",
-          lineNumbers: true
-        })
+        codemirror: CodeMirror.fromTextArea(elem, cell.editorOptions)
       };
     }
 
-    cell.editor.codemirror.setValue(cell.source.join($scope.newline));
+    cell.editor.codemirror.setValue(cell.source.join(''));
     cell.editor.codemirror.setOption('theme', 'eclipse')
       
     return cell;
@@ -94,7 +95,10 @@ var RSNBController = RSNBApp.controller("RSNBController",
     if(!cell) return;
     
     if(!cell.editor){
-      cell.editor = new Editor({lineWrapping: true});
+      cell.editorOptions = {
+        lineWrapping: true
+      };
+      cell.editor = new Editor(cell.editorOptions);
     }
       
     cell.editor.render(document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`));
