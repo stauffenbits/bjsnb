@@ -21,8 +21,8 @@ var RSNBController = RSNBApp.controller("RSNBController",
     var nb = Object.assign({}, notebook);
     nb.cells = nb.cells.map((cell, i) => {
       var copy = Object.assign({}, cell, {
-        editor: undefined, 
-        cellSource: undefined,
+        editor: null, 
+        cellSource: null,
         source: cell.cell_type == 'markdown' ? 
           cell.editor.codemirror.getValue().split(/\n/) :
           cell.source
@@ -48,6 +48,8 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     cell.editor.render(document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`));
     cell.editor.codemirror.setValue(cell.source.join('\n'));
+      
+    return cell;
   }
       
   $scope.initAllMarkdownCells = function(notebook){
@@ -77,9 +79,13 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     for(var i=0; i<$scope.notebooks.length; i++){
       for(var j=0; j<$scope.notebooks[i].cells.length; j++){
-        $scope.initMarkdownCell(i, j);
+        if($scope.notebooks[i].cells[j].cell_type === 'markdown'){
+          $scope.initMarkdownCell(i, j);
+        }
       }
     }
+      
+    return $scope.notebooks;
   }
     
   $scope.loadNotebooks();
