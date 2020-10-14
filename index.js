@@ -18,11 +18,15 @@ var RSNBController = RSNBApp.controller("RSNBController",
         switch(cell.cell_type){
         case 'markdown':
           cell.source = cell.editor ? cell.editor.codemirror.getValue().split(/\r?\n/) : [];
-          delete cell.editor;
+          if(cell.editor){
+            delete cell.editor;
+          }
           break;
         case 'code':
           cell.source = cell.cellSource ? cell.cellSource.split(/\r?\n/) : [];
-          delete cell.cellSource;
+          if(cell.cellSource){
+            delete cell.cellSource;
+          }
           break;
         }
         return cell;
@@ -32,38 +36,36 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
   $scope.initMarkdownCell = function(nbIndex, cellIndex){
     var elem = document.querySelector(`.notebook${nbIndex} * .cell${cellIndex}`);
-    console.log('elem', elem)
+    if(!elem) return;
       
     var cell = $scope.notebooks[nbIndex].cells[cellIndex];
     
-    cell.editor = new Editor({
-      element: document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`)
-    });
+    if(!cell.editor){
+      cell.editor = new Editor();
+    }
       
-    cell.editor.render();
+    cell.editor.render(document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`));
     cell.editor.codemirror.setValue(cell.cellSource || '');
   }
       
+  $scope.initAllMarkdownCells = function(notebook){
+    for(var i=0; i<notebooks.length; i++){
+      $scope.initMarkdownCell(notebook.index, i)
+    }
+  }
+      
   $scope.display = function(notebook){
+    if(!notebook) return;
     $scope.current = notebook;
-    $scope.current.cells.forEach(cell => {
-      switch(cell.cell_type){
-      case "markdown":
-        $scope.initMarkdownCell(notebook.index, cell.index);
-        break;
-      }
-    })
   }
     
   $scope.loadNotebooks = function(){
-      var notebookNames = Object.keys(window.localStorage);
-      notebookNames.forEach((name, i) => {
-          var notebook = JSON.parse(localStorage.getItem(name));
-          notebook.index = i;
-          notebook.cells.forEach((cell, j) => cell ? cell.index = j : null);
-          $scope.notebooks.push(notebook)
-          $scope.display(notebook)
-      })
+    var notebookNames = Object.keys(window.localStorage);
+    notebookNames.forEach((name, i) => {
+      var notebook = JSON.parse(localStorage.getItem(name));
+      if(!notebook) return;
+      $scope.notebooks.push(notebook);
+    })
   }
     
   $scope.loadNotebooks();

@@ -2,18 +2,6 @@
 <html ng-app="RSNBApp">
     <head>
         <title>ijsnb</title>
-
-        <script src="jquery.min.js"></script>
-        <script src="bootstrap.min.js"></script>
-        <link rel="stylesheet" href="bootstrap.min.css">
-        <script src="angular.min.js"></script>
-        <script src="download.js"></script>
-        
-        <link rel="stylesheet" href="editor.css">
-        <script src="editor.js"></script>
-        <script src="marked.js"></script>
-        
-        <script src="index.js"></script>
     </head>
     <body ng-controller="RSNBController">
         <div class="container-fluid">
@@ -27,7 +15,7 @@
                 </div>
                 <div class="col-md-9">
                     <ul
-                        ng-init="collapse = true" 
+                        ng-init="collapse = false" 
                         class="list-group" 
                         ng-repeat="notebook in notebooks track by $index">
                         
@@ -104,18 +92,20 @@
                                     rows="{{Math.max(5, cell.source.length)}}"
                                     ng-init="cell.cellSource = cell.source.join('\n')"
                                     ng-model="cell.cellSource" 
-                                    class="form-control cell cell{{$index}} code uninitlialized">
+                                    class="form-control cell cell{{$index}} code uninitialized">
                                 </textarea>
                                 
                                 <textarea 
                                     ng-show="cell.cell_type === 'markdown'"
                                     cols="82" 
                                     rows="cell.source.length"
-                                    ng-model="cell.cellSource" 
+                                    ng-init="initMarkdownCell(notebook.index, cell.index)"
+                                    ng-model="cell.cellSource"
                                     class="form-control cell cell{{$index}} markdown uninitialized">
                                 </textarea>
                                 
                                 <br>
+                                
                                 <label class="w-100 text-truncate" ng-if="cell.output[0]">
                                     {{cell.output[0]}}
                                 </label>
@@ -187,6 +177,21 @@
                     </ul>
                 </div>
             </div>
-        </div>       
+        </div>   
+        
+        <!-- jquery angular html5 bootstrap -->
+        <!-- it's the jhab stack -->
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        
+        <script src="angular.min.js"></script>
+        <script src="download.js"></script>
+        
+        <link rel="stylesheet" href="editor.css">
+        <script src="editor.js"></script>
+        <script src="marked.js"></script>
+        
+        <script src="index.js"></script>
     </body>
 </html>
