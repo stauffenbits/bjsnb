@@ -27,6 +27,13 @@ var RSNBController = RSNBApp.controller("RSNBController",
           cell.editor.codemirror.getValue().split(/\n/) :
           cell.source
       });
+      copy.source = copy.source.map(line => {
+        if(line === ''){
+          return ' ';
+        }else{
+          return line.endsWith(' ') ? line : `${line} `;
+        }
+      })
         
       return copy
     });
@@ -190,7 +197,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
 
   $scope.downloadNotebook = function(notebook){
-    download(localStorage.getItem(notebook.name), `${notebook.name}${notebook.name.endsWith('.es.ipynb') ? '' : '.es.ipynb'}`, 'application/json')
+    download(localStorage.getItem(notebook.name), `${notebook.name}${notebook.name.endsWith('.es.ipynb') ? '' : '.es.ipynb'}`, 'text')
   }
 
   $scope.addCell = function(notebook){

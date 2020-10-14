@@ -63,7 +63,7 @@
                                       type="radio"
                                       ng-model="cell.cell_type"
                                       value="markdown"
-                                      ng-click="initMarkdownCell(notebook.index, cell.index)">
+                                      ng-click="cell.index = $index; initMarkdownCell(notebook.index, cell.index)">
                                     markdown
                                 </label>
 
