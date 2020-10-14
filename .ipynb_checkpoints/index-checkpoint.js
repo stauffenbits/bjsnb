@@ -41,7 +41,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     var cell = $scope.notebooks[nbIndex].cells[cellIndex];
     
     if(!cell.editor){
-      cell.editor = new Editor();
+      cell.editor = new Editor({lineWrapping: true});
     }
       
     cell.editor.render(document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`));
@@ -146,6 +146,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
     
   $scope.run = function(cell, code){
+    if(cell.cell_type != 'code') return;
     cell.source = code.split(/\r?\n/);
     var result = window.eval(code);
     cell.output = [result];
@@ -155,7 +156,9 @@ var RSNBController = RSNBApp.controller("RSNBController",
     
   $scope.runAll = function(notebook){
     notebook.cells = notebook.cells.map(function(cell){
-      $scope.run(cell, cell.cellSource);
+      if(cell.cell_type == 'code'){
+        $scope.run(cell, cell.cellSource);
+      }
       return cell;
     });
   }

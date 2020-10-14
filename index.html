@@ -69,6 +69,7 @@
                                 </label>
                                 
                                 <a 
+                                    ng-show="cell.cell_type == 'code'"
                                     name="#run{{$index}}"
                                     href="#run{{$index}}" 
                                     class="link text-success text-right" 
@@ -89,7 +90,7 @@
                                     ng-show="cell.cell_type === 'code'"
                                     style="font-family: mono"
                                     cols="82" 
-                                    rows="{{Math.max(5, cell.source.length)}}"
+                                    rows="{{cell.source.length}}"
                                     ng-init="cell.cellSource = cell.source.join('\n')"
                                     ng-model="cell.cellSource" 
                                     class="form-control cell cell{{$index}} code uninitialized">
