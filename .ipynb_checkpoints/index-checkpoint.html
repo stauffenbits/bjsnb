@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-md-9">
                     <ul
-                        ng-init="collapse = true" 
+                        ng-init="collapse = false" 
                         class="list-group" 
                         ng-repeat="notebook in notebooks track by $index">
                         
@@ -55,7 +55,11 @@
                             </li>                          
                             <li class="list-group-item" ng-repeat="cell in notebook.cells track by $index" ng-init="cell.index = $index">
                                 <label>
-                                    <input type="radio" ng-model="cell.cell_type" value="code">
+                                    <input 
+                                      type="radio"
+                                      ng-model="cell.cell_type"
+                                      value="code"
+                                      ng-click="initCodeCell(notebook.index, cell.index)">
                                     code
                                 </label>
 
@@ -64,20 +68,34 @@
                                       type="radio"
                                       ng-model="cell.cell_type"
                                       value="markdown"
-                                      ng-click="cell.index = $index; initMarkdownCell(notebook.index, cell.index)">
+                                      ng-click="initMarkdownCell(notebook.index, cell.index)">
                                     markdown
                                 </label>
-
+                                <br>
                                 
-                                <a 
-                                    ng-show="cell.cell_type == 'code'"
-                                    name="#run{{$index}}"
-                                    href="#run{{$index}}" 
-                                    class="link text-success text-right" 
-                                    ng-click="run(cell, cell.cellSource || cell.source.join('\n'))">
-                                  run
-                                </a>
-                              
+                                <textarea ui-codemirror
+                                    ng-if="cell.cell_type === 'code'"
+                                    style="font-family: mono"
+                                    cols="82" 
+                                    rows="{{cell.source.length}}"
+                                    ng-init="cell.cellSource = cell.source.join(newline); initCodeCell(notebook.index, $index)"
+                                    ng-model="cell.cellSource" 
+                                    class="form-control cell code cell{{$index}}"
+                                    ng-keyup="cell.source = cell.editor.codemirror.getValue().split(newline);">
+                                </textarea>
+                                
+                                <textarea ui-codemirror
+                                    ng-if="cell.cell_type === 'markdown'"
+                                    cols="82" 
+                                    rows="cell.source.length"
+                                    ng-model="cell.cellSource"
+                                    ng-init="cell.cellSource = cell.source.join(newline); initMarkdownCell(notebook.index, $index)"
+                                    class="form-control cell markdown cell{{$index}}"
+                                    ng-keyup="cell.source = cell.editor.codemirror.getValue().split(newline);">
+                                </textarea>
+                                
+                                <br>
+                                
                                 <a
                                     ng-name="remove{{$index}}"
                                     ng-href="#remove{{$index}}"
@@ -85,27 +103,15 @@
                                     ng-click="removeCell(notebook, cell)">
                                     remove
                                 </a>
-                                <br>
                                 
-                                <textarea 
-                                    ng-if="cell.cell_type === 'code'"
-                                    style="font-family: mono"
-                                    cols="82" 
-                                    rows="{{cell.source.length}}"
-                                    ng-init="cell.cellSource = cell.source.join('')"
-                                    ng-model="cell.cellSource" 
-                                    class="form-control cell code cell{{$index}}">
-                                </textarea>
-                                
-                                <textarea 
-                                    ng-if="cell.cell_type === 'markdown'"
-                                    cols="82" 
-                                    rows="cell.source.length"
-                                    ng-model="cell.cellSource"
-                                    ng-init="cell.cellSource = cell.source.join(''); initMarkdownCell(notebook.index, $index)"
-                                    class="form-control cell markdown cell{{$index}}"
-                                    ng-keyup="cell.source = cell.editor.codemirror.getValue().split(newline);">
-                                </textarea>
+                                <a 
+                                    ng-show="cell.cell_type == 'code'"
+                                    name="#run{{$index}}"
+                                    href="#run{{$index}}" 
+                                    class="link text-success text-right" 
+                                    ng-click="run(cell, cell.cellSource || cell.source.join(newline))">
+                                  run
+                                </a>
                                 
                                 <br>
                                 
@@ -197,7 +203,9 @@
         
         <script src="codemirror.js"></script>
         <link rel="stylesheet" href="codemirror.css">
-        <script src="javascript.js"></script>
+        <link rel="stylesheet" href="theme/eclipse.css">
+        <script src="mode/javascript/javascript.js"></script>
+        <script src="ui-codemirror.js"></script>
         
         <script src="index.js"></script>
     </body>

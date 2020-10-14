@@ -1,4 +1,4 @@
-var RSNBApp = angular.module('RSNBApp', []);
+var RSNBApp = angular.module('RSNBApp', ['ui.codemirror']);
 
 var RSNBController = RSNBApp.controller("RSNBController", 
   ["$scope", "$http", "$sce", "$element", "$document",
@@ -6,7 +6,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   $scope.notebooks = []
   $scope.current = null;
       
-  $scope.newline = /\n/;
+  $scope.newline = '\n';
     
   // https://stackoverflow.com/a/10080841
   $("textarea").keyup(function(e) {
@@ -69,17 +69,19 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     var cell = $scope.notebooks[nbIndex].cells[cellIndex];
     if(!cell) return;
-    
-    if(!cell.editor){
-      cell.editor = new Editor({lineWrapping: true});
-    }
       
     if(!cell.editor){
-      cell.editor = {codemirror: CodeMirror(elem, {
-        value: cell.source.join(''),
-        mode:  "javascript"
-      })};
+      cell.editor = {
+        codemirror: CodeMirror.fromTextArea(elem, {
+          value: cell.source.join($scope.newline),
+          mode:  "javascript",
+          lineNumbers: true
+        })
+      };
     }
+
+    cell.editor.codemirror.setValue(cell.source.join($scope.newline));
+    cell.editor.codemirror.setOption('theme', 'eclipse')
       
     return cell;
   }
@@ -97,6 +99,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     cell.editor.render(document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`));
     cell.editor.codemirror.setValue(cell.source.join(''));
+    cell.editor.codemirror.refresh();
     cell.cellSource = cell.source.join('')
     return cell;
   }
@@ -147,6 +150,10 @@ var RSNBController = RSNBApp.controller("RSNBController",
           break;
         }
       }
+    }
+    
+    if($scope.notebooks.length){
+      $scope.display($scope.notebooks[0])
     }
       
     return $scope.notebooks;
