@@ -18,7 +18,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       nb.cells = nb.cells.map((cell, i) => {
         switch(cell.cell_type){
         case 'markdown':
-          cell.source = cell.editor ? cell.editor.codemirror.getValue().split(/\n/) : cell.cellSource.split(/\n/);
+          cell.source = (cell.editor ? cell.editor.codemirror.getValue().split(/\n/) : cell.cellSource.split(/\n/));
           if(cell.editor){
             delete cell.editor;
           }
@@ -51,6 +51,10 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
       
   $scope.initAllMarkdownCells = function(notebook){
+    if(!notebook.index){
+      notebook.index = $scope.notebooks.indexOf(notebook);
+    }
+      
     for(var i=0; i<notebook.cells.length; i++){
       $scope.initMarkdownCell(notebook.index, i)
     }
@@ -177,17 +181,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
 
   $scope.downloadNotebook = function(notebook){
-    notebook.cells = notebook.cells.map(cell => {
-      if(cell.editor){
-        cell.cellSource = cell.editor.codemirror.getValue();
-      }
-      
-      cell.source = cell.cellSource.split(/\n/);
-      delete cell.editor;
-      return cell;
-    })
-    var text = JSON.stringify(notebook);
-    download(text, `${notebook.name}${notebook.name.endsWith('.es.ipynb') ? '' : '.es.ipynb'}`, 'text')
+    download(localStorage.getItem(notebook.name), `${notebook.name}${notebook.name.endsWith('.es.ipynb') ? '' : '.es.ipynb'}`, 'application/json')
   }
 
   $scope.addCell = function(notebook){
