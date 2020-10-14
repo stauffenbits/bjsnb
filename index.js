@@ -172,6 +172,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   $scope.downloadNotebook = function(notebook){
     notebook.cells = notebook.cells.map(cell => {
       cell.source = cell.cellSource.split(/\r?\n/);
+      delete cell.editor;
       return cell;
     })
     var text = JSON.stringify(notebook);

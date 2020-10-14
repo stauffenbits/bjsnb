@@ -14,8 +14,8 @@ var RSNBController = RSNBApp.controller("RSNBController",
   });
   
   $scope.storeNotebook = function(notebook){
-    var notebook = Object.assign({}, notebook)
-      notebook.cells = notebook.cells.map((cell, i) => {
+      var nb = Object.assign({}, notebook)
+      nb.cells = nb.cells.map((cell, i) => {
         switch(cell.cell_type){
         case 'markdown':
           cell.source = cell.editor ? cell.editor.codemirror.getValue().split(/\r?\n/) : [];
@@ -172,6 +172,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   $scope.downloadNotebook = function(notebook){
     notebook.cells = notebook.cells.map(cell => {
       cell.source = cell.cellSource.split(/\r?\n/);
+      delete cell.editor;
       return cell;
     })
     var text = JSON.stringify(notebook);
