@@ -14,6 +14,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   });
   
   $scope.storeNotebook = function(notebook){
+    var notebook = Object.assign({}, notebook)
       notebook.cells = notebook.cells.map((cell, i) => {
         switch(cell.cell_type){
         case 'markdown':
