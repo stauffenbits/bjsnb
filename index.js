@@ -6,7 +6,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   $scope.notebooks = []
   $scope.current = null;
       
-  $scope.newline = '\n';
+  $scope.newline = /\n/;
     
   // https://stackoverflow.com/a/10080841
   $("textarea").keyup(function(e) {
@@ -39,10 +39,10 @@ var RSNBController = RSNBApp.controller("RSNBController",
       }
       if(cellCopy.source === undefined) cellCopy.source = [];
       cellCopy.source = cellCopy.source.map(line => {
-        if(line === ''){
-          return '\n';
-        }else{
+        if(!line.endsWith('\n')){
           return `${line}\n`;
+        }else{
+          return line;
         }
       });
       delete cellCopy.outputs;
@@ -73,7 +73,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     }
       
     cell.editor.render(document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`));
-    cell.editor.codemirror.setValue(cell.source.join('\n'));
+    cell.editor.codemirror.setValue(cell.source.join(''));
       
     return cell;
   }
