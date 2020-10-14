@@ -40,7 +40,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       if(cellCopy.source === undefined) cellCopy.source = [];
       cellCopy.source = cellCopy.source.map(line => {
         if(line === ''){
-          return ' ';
+          return '\n';
         }else{
           return `${line}\n`;
         }
