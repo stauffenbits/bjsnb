@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="RSNBApp">
     <head>
+        <meta charset="UTF-8">
         <title>es.ipynb</title>
     </head>
     <body ng-controller="RSNBController">
@@ -67,10 +68,6 @@
                                     markdown
                                 </label>
 
-                                <label>
-                                    <input type="radio" ng-model="cell.cell_type" value="raw">
-                                    raw
-                                </label>
                                 
                                 <a 
                                     ng-show="cell.cell_type == 'code'"
@@ -95,7 +92,7 @@
                                     style="font-family: mono"
                                     cols="82" 
                                     rows="{{cell.source.length}}"
-                                    ng-init="cell.cellSource = cell.source.join('\n')"
+                                    ng-init="cell.cellSource = cell.source.join('\n  ')"
                                     ng-model="cell.cellSource" 
                                     class="form-control cell code cell{{$index}}">
                                 </textarea>
@@ -105,8 +102,9 @@
                                     cols="82" 
                                     rows="cell.source.length"
                                     ng-model="cell.cellSource"
-                                    ng-init="cell.cellSource = cell.source.join('\n')"
-                                    class="form-control cell markdown cell{{$index}}">
+                                    ng-init="cell.cellSource = cell.source.join('\n  ')"
+                                    class="form-control cell markdown cell{{$index}}"
+                                    ng-keyup="cell.source = cell.editor.codemirror.getValue().split(newline);">
                                 </textarea>
                                 
                                 <br>

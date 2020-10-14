@@ -5,6 +5,8 @@ var RSNBController = RSNBApp.controller("RSNBController",
   function($scope, $http, $sce, $element, $document){
   $scope.notebooks = []
   $scope.current = null;
+      
+  $scope.newline = '\n';
     
   // https://stackoverflow.com/a/10080841
   $("textarea").keyup(function(e) {
@@ -20,30 +22,43 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     var nb = Object.assign({}, notebook);
     nb.cells = nb.cells.map((cell, i) => {
-      var cellCopy = Object.assign({}, cell, {
+      var cellCopy = Object.assign({}, cell)
+      Object.assign(cellCopy, {
         editor: null, 
-        cellSource: null,
-        source: cell.cell_type == 'markdown' ? 
-          cell.editor.codemirror.getValue().split(/\n/) :
-          cell.source
+        cellSource: null
       });
+      switch(cell.cell_type){
+        case "markdown":
+          cellCopy.source = (cell.editor ? cell.editor.codemirror.getValue().split($scope.newline) : cell.source);
+          break;
+        case "code":
+          cellCopy.source = cell.cellSource.split($scope.newline);
+          break;
+        default:
+          break;
+      }
+      if(cellCopy.source === undefined) cellCopy.source = [];
       cellCopy.source = cellCopy.source.map(line => {
         if(line === ''){
           return ' ';
         }else{
-          return line.endsWith(' ') ? line : `${line} `;
+          return line;
         }
-      })
+      });
       delete cellCopy.outputs;
       delete cellCopy.cellSource;
       delete cellCopy.index;
       delete cellCopy.editor;
+      delete cellCopy.execution_count;
         
-      return cellCopy
+      return cellCopy;
     });
+      
+    delete nb.index;
+    var name = notebook.name;
     
     console.log(nb);
-    window.localStorage.setItem(notebook.name, JSON.stringify(nb));
+    window.localStorage.setItem(name, JSON.stringify(nb));
   }
       
   $scope.initMarkdownCell = function(nbIndex, cellIndex){
@@ -181,7 +196,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     
   $scope.run = function(cell, code){
     if(cell.cell_type != 'code') return;
-    cell.source = code.split(/\n/);
+    cell.source = code.split($scope.newline);
     var result = window.eval(code);
     cell.output = [result];
     cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
@@ -198,11 +213,14 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
     
   $scope.clearAll = function(notebook){
-    notebook.cells.forEach(cell => cell.source = [''])
+    notebook.cells = notebook.cells.map(cell => {
+      cell.source = [];
+      return cell;
+    })
   }
 
   $scope.downloadNotebook = function(notebook){
-    download(localStorage.getItem(notebook.name), `${notebook.name}${notebook.name.endsWith('.es.ipynb') ? '' : '.es.ipynb'}`, 'text')
+    download(localStorage.getItem(notebook.name), `${notebook.name}${notebook.name.endsWith('.es.ipynb') ? '' : '.es.ipynb'}`, 'application/x-ipynb+json')
   }
 
   $scope.addCell = function(notebook){
