@@ -24,7 +24,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
           }
           break;
         case 'code':
-          cell.source = cell.cellSource ? cell.cellSource.split(/\n/) : cell.cellSource.split(/\n/);
+          cell.source = cell.cellSource !== undefined ? cell.cellSource.split(/\n/) : cell.source;
           if(cell.cellSource){
             delete cell.cellSource;
           }
@@ -211,5 +211,16 @@ var RSNBController = RSNBApp.controller("RSNBController",
   $scope.isArray = function(potArr){
     return potArr instanceof Array;
   }
+      
+  $(window).bind('keydown', function(event) {
+    if (event.ctrlKey || event.metaKey) {
+      switch (String.fromCharCode(event.which).toLowerCase()) {
+        case 's':
+          event.preventDefault();
+          $scope.storeNotebook($scope.current);
+          break;
+      }
+    }
+  });
 
 }])
