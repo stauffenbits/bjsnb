@@ -32,9 +32,10 @@ var RSNBController = RSNBApp.controller("RSNBController",
           cellCopy.source = (cell.editor ? cell.editor.codemirror.getValue().split($scope.newline) : cell.source);
           break;
         case "code":
-          cellCopy.source = cell.source || cell.cellSource.split($scope.newline);
+          cellCopy.source = (cell.editor ? cell.editor.codemirror.getValue().split($scope.newline) : cell.source);
           break;
         default:
+          cellCopy.source = cell.source || cell.cellSource.split($scope.newline);
           break;
       }
       if(cellCopy.source === undefined) cellCopy.source = [];
@@ -61,8 +62,30 @@ var RSNBController = RSNBApp.controller("RSNBController",
     window.localStorage.setItem(name, JSON.stringify(nb));
   }
       
+  $scope.initCodeCell = function(nbIndex, cellIndex){
+      
+    var elem = document.querySelector(`.notebook${nbIndex} * .code.cell${cellIndex}`);
+    if(!elem) return;
+      
+    var cell = $scope.notebooks[nbIndex].cells[cellIndex];
+    if(!cell) return;
+    
+    if(!cell.editor){
+      cell.editor = new Editor({lineWrapping: true});
+    }
+      
+    if(!cell.editor){
+      cell.editor = {codemirror: CodeMirror(elem, {
+        value: cell.source.join(''),
+        mode:  "javascript"
+      })};
+    }
+      
+    return cell;
+  }
+      
   $scope.initMarkdownCell = function(nbIndex, cellIndex){
-    var elem = document.querySelector(`.notebook${nbIndex} * .cell${cellIndex}`);
+    var elem = document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`);
     if(!elem) return;
       
     var cell = $scope.notebooks[nbIndex].cells[cellIndex];
@@ -74,7 +97,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     cell.editor.render(document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`));
     cell.editor.codemirror.setValue(cell.source.join(''));
-      
+    cell.cellSource = cell.source.join('')
     return cell;
   }
       
@@ -85,6 +108,16 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     for(var i=0; i<notebook.cells.length; i++){
       $scope.initMarkdownCell(notebook.index, i);
+    }
+  }
+
+  $scope.initAllCodeCells = function(notebook){
+    if(!notebook.index){
+      notebook.index = $scope.notebooks.indexOf(notebook);
+    }
+      
+    for(var i=0; i<notebook.cells.length; i++){
+      $scope.initCodeCell(notebook.index, i);
     }
   }
       
@@ -105,8 +138,13 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     for(var i=0; i<$scope.notebooks.length; i++){
       for(var j=0; j<$scope.notebooks[i].cells.length; j++){
-        if($scope.notebooks[i].cells[j].cell_type === 'markdown'){
+        switch($scope.notebooks[i].cells[j].cell_type){
+        case 'markdown':
           $scope.initMarkdownCell(i, j);
+          break;
+        case 'code':
+          $scope.initCodeCell(i, j);
+          break;
         }
       }
     }
@@ -138,7 +176,6 @@ var RSNBController = RSNBApp.controller("RSNBController",
         
         $scope.storeNotebook(notebook);
         $scope.display(notebook);
-        $scope.$apply();
       }
     })
   }
@@ -184,6 +221,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     $scope.notebooks.push(notebook);
     $scope.initAllMarkdownCells(notebook);
+    $scope.initAllCodeCells(notebook);
 
     $scope.storeNotebook(notebook);
     $scope.display(notebook);
