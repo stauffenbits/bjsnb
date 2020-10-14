@@ -20,22 +20,26 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     var nb = Object.assign({}, notebook);
     nb.cells = nb.cells.map((cell, i) => {
-      var copy = Object.assign({}, cell, {
+      var cellCopy = Object.assign({}, cell, {
         editor: null, 
         cellSource: null,
         source: cell.cell_type == 'markdown' ? 
           cell.editor.codemirror.getValue().split(/\n/) :
           cell.source
       });
-      copy.source = copy.source.map(line => {
+      cellCopy.source = cellCopy.source.map(line => {
         if(line === ''){
           return ' ';
         }else{
           return line.endsWith(' ') ? line : `${line} `;
         }
       })
+      delete cellCopy.outputs;
+      delete cellCopy.cellSource;
+      delete cellCopy.index;
+      delete cellCopy.editor;
         
-      return copy
+      return cellCopy
     });
     
     console.log(nb);
@@ -167,6 +171,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     $scope.initAllMarkdownCells(notebook);
 
     $scope.storeNotebook(notebook);
+    $scope.display(notebook)
   }
 
   $scope.removeNotebook = function(notebook){
