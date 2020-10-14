@@ -58,7 +58,8 @@
                                     <input 
                                       type="radio"
                                       ng-model="cell.cell_type"
-                                      value="code">
+                                      value="code"
+                                      ng-click="initCodeCell(notebook.index, cell.index)">
                                     code
                                 </label>
 
@@ -66,28 +67,29 @@
                                     <input 
                                       type="radio"
                                       ng-model="cell.cell_type"
-                                      value="markdown">
+                                      value="markdown"
+                                      ng-click="initMarkdownCell(notebook.index, cell.index)">
                                     markdown
                                 </label>
                                 <br>
                                 
-                                <textarea ui-codemirror ui-codemirror-opts="cell.editorOptions"
+                                <textarea ui-codemirror-opts="cell.editorOptions"
                                     ng-if="cell.cell_type === 'code'"
                                     style="font-family: mono"
                                     cols="82" 
                                     rows="{{cell.source.length}}"
-                                    ng-init="cell.cellSource = cell.source.join(''); "
+                                    ng-init="cell.cellSource = cell.source.join(''); initCodeCell(notebook.index, cell.index);"
                                     ng-model="cell.cellSource" 
                                     class="form-control cell code cell{{$index}}"
                                     ng-keyup="cell.source = cell.editor.codemirror.getValue().split(newline);">
                                 </textarea>
                                 
-                                <textarea ui-codemirror ui-codemirror-opts="cell.editorOptions"
+                                <textarea ui-codemirror-opts="cell.editorOptions"
                                     ng-if="cell.cell_type === 'markdown'"
                                     cols="82" 
                                     rows="cell.source.length"
                                     ng-model="cell.cellSource"
-                                    ng-init="cell.cellSource = cell.source.join('');"
+                                    ng-init="cell.cellSource = cell.source.join(''); initMarkdownCell(notebook.index, cell.index);"
                                     class="form-control cell markdown cell{{$index}}"
                                     ng-keyup="cell.source = cell.editor.codemirror.getValue().split(newline);">
                                 </textarea>
@@ -203,6 +205,7 @@
         <link rel="stylesheet" href="codemirror.css">
         <link rel="stylesheet" href="theme/eclipse.css">
         <script src="mode/javascript/javascript.js"></script>
+        <script src="mode/markdown/markdown.js"></script>
         <script src="ui-codemirror.js"></script>
         
         <script src="index.js"></script>

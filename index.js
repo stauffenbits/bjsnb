@@ -70,9 +70,13 @@ var RSNBController = RSNBApp.controller("RSNBController",
     var cell = $scope.notebooks[nbIndex].cells[cellIndex];
     if(!cell) return;
       
+    if(cell.editor){
+      delete cell.editor;
+      delete cell.editorOptions;
+    }
+      
     if(!cell.editor){
       cell.editorOptions = {
-        value: cell.source.join(''),
         mode:  "javascript",
         lineNumbers: true
       }
@@ -82,8 +86,9 @@ var RSNBController = RSNBApp.controller("RSNBController",
     }
 
     cell.editor.codemirror.setValue(cell.source.join(''));
-    cell.editor.codemirror.setOption('theme', 'eclipse')
-      
+    cell.editor.codemirror.setOption('theme', 'eclipse');
+    cell.cellSource = cell.source.join('')
+
     return cell;
   }
       
@@ -93,10 +98,16 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
     var cell = $scope.notebooks[nbIndex].cells[cellIndex];
     if(!cell) return;
+      
+    if(cell.editor){
+      delete cell.editor;
+      delete cell.editorOptions;
+    }
     
     if(!cell.editor){
       cell.editorOptions = {
-        lineWrapping: true
+        lineWrapping: true,
+        mode: 'markdown'
       };
       cell.editor = new Editor(cell.editorOptions);
     }
@@ -105,6 +116,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     cell.editor.codemirror.setValue(cell.source.join(''));
     cell.editor.codemirror.refresh();
     cell.cellSource = cell.source.join('')
+    
     return cell;
   }
       
