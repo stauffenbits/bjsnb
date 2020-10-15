@@ -32,19 +32,12 @@ var RSNBController = RSNBApp.controller("RSNBController",
         editor: null, 
         cellSource: null
       });
-      switch(cell.cell_type){
-        case "markdown":
-          cellCopy.source = cell.cellSource ? cell.cellSource.split($scope.newline) : [];
-          break;
-        case "code":
-          // cellCopy.source = (cell.editor ? cell.editor.codemirror.getValue().split($scope.newline) : cell.source);
-          cellCopy.source = cell.cellSource ? cell.cellSource.split($scope.newline) : [];
-          break;
-        default:
-          cellCopy.source = cell.source || cell.cellSource.split($scope.newline);
-          break;
-      }
-      if(cellCopy.source === undefined) cellCopy.source = [];
+        
+      // ! is there enough information here to justify the following line of code? 
+      // I am trying to decide which array is newer, without knowing which on is. 
+      cellCopy.source = cell.cellSource ? cell.cellSource.split($scope.newline) : cell.source;
+      
+      if(!cellCopy.source) cellCopy.source = [];
       cellCopy.source = cellCopy.source.map(line => {
         if(!line.endsWith('\n')){
           return `${line}\n`;
@@ -167,19 +160,6 @@ var RSNBController = RSNBApp.controller("RSNBController",
       var notebook = JSON.parse(localStorage.getItem(notebookNames[i]));
       if(!notebook) return;
       $scope.notebooks.push(notebook);
-    }
-      
-    for(var i=0; i<$scope.notebooks.length; i++){
-      for(var j=0; j<$scope.notebooks[i].cells.length; j++){
-        switch($scope.notebooks[i].cells[j].cell_type){
-        case 'markdown':
-          $scope.initMarkdownCell(i, j);
-          break;
-        case 'code':
-          $scope.initCodeCell(i, j);
-          break;
-        }
-      }
     }
     
     if($scope.notebooks.length){
