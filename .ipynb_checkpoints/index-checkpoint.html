@@ -65,6 +65,16 @@
                                 </a>
                             </li>                          
                             <li class="list-group-item" ng-repeat="cell in notebook.cells track by $index" ng-init="cell.index = $index">
+                            
+                                <a 
+                                    ng-name="addCellAt{{$index}}}"
+                                    ng-href="#addCellAt{{$index}}"
+                                    class="link text-secondary"
+                                    ng-click="addCellAt(notebook, $index)">
+                                    add cell
+                                </a>
+                                <br>
+                                <hr>
                                 <label>
                                     <input 
                                       type="radio"
@@ -124,12 +134,13 @@
                                 
                                 <br>
                                 
-                                <label class="w-100 text-truncate" ng-if="cell.output[0]">
+                                <label class="w-100 text-truncate" ng-if="cell.cell_type == 'code' && cell.output[0]">
                                     {{cell.output[0]}}
                                 </label>
+
                                 
-                                <div ng-if="isArray(cell.output[0])" ng-init="collapsed_array = true" ng-show="isArray(cell.output[0])">
-                                    [
+                                <div ng-if="isArray(cell.output[0]) && cell.cell_type == 'code'" ng-init="collapsed_array = true" ng-show="isArray(cell.output[0])">
+                                    Table [
                                     <a
                                         ng-name="showHide{{$index}}" 
                                         ng-href="#showHide{{$index}}" 
@@ -155,8 +166,8 @@
                                     </table>
                                 </div>
                                 
-                                <div ng-if="isObject(cell.output[0]) && !isArray(cell.output[0]) && !isVega(cell.output[0])" ng-init="collapsed_object = true">
-                                    table: [
+                                <div ng-if="isObject(cell.output[0]) && !isArray(cell.output[0]) && cell.cell_type == 'code'" ng-init="collapsed_object = true">
+                                    Object Listing: [
                                     <a
                                         ng-name="showHide{{$index}}" 
                                         ng-href="#showHide{{$index}}" 
@@ -183,17 +194,20 @@
                                 </div>
                                 
                                 
-                                <div ng-show="cell.output[0] && isVega(cell.output[0])" ng-init="collapsed_vis = true">
-                                    visualization: [
+                                <div 
+                                     ng-if="isVega(cell.output[0]) && cell.cell_type == 'code'" 
+                                     class="flex-fill" 
+                                     ng-init="collapsed_vis = true">
+                                    Visualization: [
                                     <a
                                        ng-name="showHideVis{{$index}}"
                                        ng-href="#showHideVis{{$index}}"
                                        class="link link-secondary"
-                                       ng-click="collapsed_vis = !collapsed_vis">
+                                       ng-click="collapsed_vis = !collapsed_vis; visualize(cell);">
                                        <label ng-show="collapsed_vis"
-                                              ng-click="visualize(cell)">+</label>
+                                              ng-click="collapsed_vis = false">+</label>
                                        <label ng-show="!collapsed_vis"
-                                              ng-click="hideVisualization(cell)">-</label>
+                                              ng-click="collpsed_vis = true">-</label>
                                     </a>
                                     ]
                                     <div class="output{{$index}}">
@@ -201,6 +215,7 @@
                                     </div>
                                 </div>
                             </li>
+                            
                             <li class="list-group-item">
                                 <a 
                                     ng-name="addCell{{$index}}}"

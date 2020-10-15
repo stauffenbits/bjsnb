@@ -50,6 +50,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       delete cellCopy.index;
       delete cellCopy.editor;
       delete cellCopy.execution_count;
+      delete cellCopy.visualization;
         
       return cellCopy;
     });
@@ -283,6 +284,16 @@ var RSNBController = RSNBApp.controller("RSNBController",
        "source": []
       })
   }
+      
+  $scope.addCellAt = function(notebook, i){
+    notebook.cells.splice(i, 0, {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": []
+    })
+  }
 
   $scope.removeCell = function(notebook, cell){
     notebook = notebook.cells.splice(notebook.cells.indexOf(cell), 1)
@@ -297,7 +308,8 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
       
   $scope.isVega = function(potVega){
-    return potVega['$schema'].startsWith('https://vega.github.io/schema/vega/');
+    if(!potVega) return false;
+    return Object.keys(potVega).indexOf('$schema') > -1;
   }
       
   $scope.visualize = function(cell){
@@ -308,7 +320,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
   $scope.hideVisualiation = function(cell){
     if(cell.visualization){
-      cell.visualization.remove();
+        
     }
   }
       
