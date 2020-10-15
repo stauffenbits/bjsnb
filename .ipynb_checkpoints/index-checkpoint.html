@@ -87,7 +87,7 @@
                                     style="font-family: mono"
                                     cols="82" 
                                     rows="{{cell.source.length}}"
-                                    ng-init="cell.cellSource = cell.source.join('');"
+                                    ng-init="cell.cellSource = cell.cellSource ? cell.cellSource : cell.source.join('');"
                                     ng-model="cell.cellSource" 
                                     class="form-control cell code cell{{$index}}"
                                     ng-keyup="cell.source = cell.cellSource.split(newline);">
@@ -98,7 +98,7 @@
                                     cols="82" 
                                     rows="cell.source.length"
                                     ng-model="cell.cellSource"
-                                    ng-init="cell.cellSource = cell.source.join('');"
+                                    ng-init="cell.cellSource = cell.cellSource ? cell.cellSource : cell.source.join('');"
                                     class="form-control cell markdown cell{{$index}}"
                                     ng-keyup="cell.source = cell.cellSource.split(newline);">
                                 </textarea>
