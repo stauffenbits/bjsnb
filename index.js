@@ -296,6 +296,22 @@ var RSNBController = RSNBApp.controller("RSNBController",
     return potArr instanceof Array;
   }
       
+  $scope.isVega = function(potVega){
+    return potVega['$schema'].startsWith('https://vega.github.io/schema/vega/');
+  }
+      
+  $scope.visualize = function(cell){
+    vegaEmbed(`.output${cell.index}`, cell.output[0]).then(result => {
+      cell.visualization = result;
+    })
+  }
+      
+  $scope.hideVisualiation = function(cell){
+    if(cell.visualization){
+      cell.visualization.remove();
+    }
+  }
+      
   $(window).bind('keydown', function(event){
     if (event.ctrlKey || event.metaKey) {
       switch (String.fromCharCode(event.which).toLowerCase()) {

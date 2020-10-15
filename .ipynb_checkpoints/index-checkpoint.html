@@ -155,7 +155,7 @@
                                     </table>
                                 </div>
                                 
-                                <div ng-if="isObject(cell.output[0]) && !isArray(cell.output[0])" ng-init="collapsed_object = true">
+                                <div ng-if="isObject(cell.output[0]) && !isArray(cell.output[0]) && !isVega(cell.output[0])" ng-init="collapsed_object = true">
                                     [
                                     <a
                                         ng-name="showHide{{$index}}" 
@@ -180,6 +180,22 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                </div>
+                                
+                                <a
+                                   ng-name="showHideVis{{$index}}"
+                                   ng-href="#showHideVis{{$index}}"
+                                   class="link link-secondary"
+                                   ng-click="collapsed_vis = !collapsed_vis">
+                                   <label ng-show="collapsed_object"
+                                          ng-click="visualize(cell)">+</label>
+                                   <label ng-show="!collapsed_object"
+                                          ng-click="">-</label>
+                                </a>
+                                <div 
+                                     ng-if="isObject(cell.output[0]) && isVega(cell.output[0])"
+                                     class="output{{$index}}">
+                                    
                                 </div>
                             </li>
                             <li class="list-group-item">
