@@ -250,7 +250,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     if(cell.cell_type != 'code') return;
     cell.source = code.split($scope.newline);
     var result = window.eval(code);
-    cell.output = [result];
+    cell.outputs = [result];
     cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
     return result;
   }
@@ -313,7 +313,8 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
       
   $scope.visualize = function(cell){
-    vegaEmbed(`.output${cell.index}`, cell.output[0]).then(result => {
+    if(isVega(cell.outputs[0]))
+    vegaEmbed(`.output${cell.index}`, cell.outputs[0]).then(result => {
       cell.visualization = result;
     })
   }
