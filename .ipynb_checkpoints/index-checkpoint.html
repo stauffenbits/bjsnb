@@ -156,7 +156,7 @@
                                 </div>
                                 
                                 <div ng-if="isObject(cell.output[0]) && !isArray(cell.output[0]) && !isVega(cell.output[0])" ng-init="collapsed_object = true">
-                                    [
+                                    table: [
                                     <a
                                         ng-name="showHide{{$index}}" 
                                         ng-href="#showHide{{$index}}" 
@@ -165,7 +165,7 @@
                                         <label ng-show="collapsed_object">+</label>
                                         <label ng-show="!collapsed_object">-</label>
                                     </a>
-                                    ]
+                                    ] 
                                     <table class="table" ng-show="!collapsed_object">
                                         <thead>
                                             <tr>
@@ -182,20 +182,23 @@
                                     </table>
                                 </div>
                                 
-                                <a
-                                   ng-name="showHideVis{{$index}}"
-                                   ng-href="#showHideVis{{$index}}"
-                                   class="link link-secondary"
-                                   ng-click="collapsed_vis = !collapsed_vis">
-                                   <label ng-show="collapsed_object"
-                                          ng-click="visualize(cell)">+</label>
-                                   <label ng-show="!collapsed_object"
-                                          ng-click="">-</label>
-                                </a>
-                                <div 
-                                     ng-if="isObject(cell.output[0]) && isVega(cell.output[0])"
-                                     class="output{{$index}}">
-                                    
+                                
+                                <div ng-show="cell.output[0] && isVega(cell.output[0])" ng-init="collapsed_vis = true">
+                                    visualization: [
+                                    <a
+                                       ng-name="showHideVis{{$index}}"
+                                       ng-href="#showHideVis{{$index}}"
+                                       class="link link-secondary"
+                                       ng-click="collapsed_vis = !collapsed_vis">
+                                       <label ng-show="collapsed_vis"
+                                              ng-click="visualize(cell)">+</label>
+                                       <label ng-show="!collapsed_vis"
+                                              ng-click="hideVisualization(cell)">-</label>
+                                    </a>
+                                    ]
+                                    <div class="output{{$index}}">
+                                        
+                                    </div>
                                 </div>
                             </li>
                             <li class="list-group-item">
