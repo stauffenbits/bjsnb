@@ -244,10 +244,9 @@ var RSNBController = RSNBApp.controller("RSNBController",
         "name": "es.ipynb",
         "version": 6
        },
-       "file_extension": ".es.ipynb",
+       "file_extension": ".js",
        "mimetype": "application/json",
-       "name": "javascript",
-       "version": "1.0.0"
+       "name": "ecma-script"
       }
      },
      "nbformat": 4,
