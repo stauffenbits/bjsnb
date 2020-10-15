@@ -34,11 +34,11 @@ var RSNBController = RSNBApp.controller("RSNBController",
       });
       switch(cell.cell_type){
         case "markdown":
-          cellCopy.source = cell.cellSource.split($scope.newline);
+          cellCopy.source = cell.cellSource ? cell.cellSource.split($scope.newline) : [];
           break;
         case "code":
           // cellCopy.source = (cell.editor ? cell.editor.codemirror.getValue().split($scope.newline) : cell.source);
-          cellCopy.source = cell.cellSource.split($scope.newline);
+          cellCopy.source = cell.cellSource ? cell.cellSource.split($scope.newline) : [];
           break;
         default:
           cellCopy.source = cell.source || cell.cellSource.split($scope.newline);
