@@ -7,23 +7,32 @@
     <body ng-controller="RSNBController">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <form class="form">
                         <input class="form-control" type="file" name="files[]" multiple />
                         <button ng-click="upload()" class="form-control link text-secondary">Upload Notebook</button>
                         <button ng-click="addNotebook()" class="form-control link text-secondary">New Notebook</button>
                     </form>
-                </div>
-                <div class="col-md-9">
-                    <ul
-                        ng-init="collapse = false" 
-                        class="list-group" 
-                        ng-repeat="notebook in notebooks track by $index">
-                        
-                        <li class="list-group-item">
-                            <a class="h3 form-header" href="#" ng-click="collapse = !collapse; display(notebook);">{{notebook.name}}</a>
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="notebook in notebooks track by $index">
+                            <a href="#" ng-click="display(notebook);">{{notebook.name}}</a>
                         </li>
-                        <form ng-show="!collapse" class="form notebook notebook{{$index}}" ng-init="notebook.index = $index">
+                    </ul>
+                </div>
+                <div class="col-md-8">
+
+                    <form ng-if="notebook == current"
+                        ng-repeat="notebook in notebooks track by $index"
+                        ng-init="notebook.index = $index"
+                        class="form notebook notebook{{$index}}">
+                        
+                        <ul
+                            class="list-group">                            
+                            
+                            <li class="list-group-item">
+                                <h3 class="form-header" href="#">{{notebook.name}}</h3>
+                            </li>
+                            
                             <li class="list-group-item">
                                 <a 
                                     class="form-control link text-success"
@@ -73,7 +82,7 @@
                                 </label>
                                 <br>
                                 
-                                <textarea ui-codemirror ui-codemirror-opts="{mode: 'javascript', theme: 'eclipse'}"
+                                <textarea ui-codemirror ui-codemirror-opts="{mode: 'javascript', theme: 'eclipse', lineWrapping: true, lineNumbers: true}"
                                     ng-if="cell.cell_type === 'code'"
                                     style="font-family: mono"
                                     cols="82" 
@@ -84,7 +93,7 @@
                                     ng-keyup="cell.source = cell.cellSource.split(newline);">
                                 </textarea>
                                 
-                                <textarea ui-codemirror ui-codemirror-opts="{mode: 'markdown', theme: 'eclipse'}"
+                                <textarea ui-codemirror ui-codemirror-opts="{mode: 'markdown', theme: 'eclipse', lineWrapping: true, lineNumbers: true}"
                                     ng-if="cell.cell_type === 'markdown'"
                                     cols="82" 
                                     rows="cell.source.length"
@@ -182,8 +191,8 @@
                                     add cell
                                 </a>
                             </li>
-                        </form>
-                    </ul>
+                        </ul>
+                    </form>
                 </div>
             </div>
         </div>   

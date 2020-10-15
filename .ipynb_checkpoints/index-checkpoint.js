@@ -5,6 +5,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   function($scope, $http, $sce, $element, $document){
   $scope.notebooks = [];
   $scope.current = null;
+  $scope.currents = [];
       
   $scope.reservedNames = [
     'initialized', 
@@ -33,10 +34,11 @@ var RSNBController = RSNBApp.controller("RSNBController",
       });
       switch(cell.cell_type){
         case "markdown":
-          cellCopy.source = (cell.editor ? cell.editor.codemirror.getValue().split($scope.newline) : cell.source);
+          cellCopy.source = cell.cellSource.split($scope.newline);
           break;
         case "code":
-          cellCopy.source = (cell.editor ? cell.editor.codemirror.getValue().split($scope.newline) : cell.source);
+          // cellCopy.source = (cell.editor ? cell.editor.codemirror.getValue().split($scope.newline) : cell.source);
+          cellCopy.source = cell.cellSource.split($scope.newline);
           break;
         default:
           cellCopy.source = cell.source || cell.cellSource.split($scope.newline);
@@ -68,7 +70,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
   $scope.initCodeCell = function(nbIndex, cellIndex){
       
-    var elem = document.querySelector(`.notebook${nbIndex} * .code.cell${cellIndex}`);
+    var elem = document.querySelector(`.notebook${nbIndex} .code.cell${cellIndex}`);
     if(!elem) return;
       
     var cell = $scope.notebooks[nbIndex].cells[cellIndex];
@@ -98,7 +100,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
       
   $scope.initMarkdownCell = function(nbIndex, cellIndex){
-    var elem = document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`);
+    var elem = document.querySelector(`.notebook${nbIndex} .markdown.cell${cellIndex}`);
     if(!elem) return;
       
     var cell = $scope.notebooks[nbIndex].cells[cellIndex];
@@ -118,7 +120,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       cell.editor = new Editor(cell.editorOptions);
     }
       
-    cell.editor.render(document.querySelector(`.notebook${nbIndex} * .markdown.cell${cellIndex}`));
+    cell.editor.render(document.querySelector(`.notebook${nbIndex} .markdown.cell${cellIndex}`));
     cell.editor.codemirror.setValue(cell.source.join(''));
     cell.editor.codemirror.refresh();
     cell.cellSource = cell.source.join('')
@@ -149,6 +151,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   $scope.display = function(notebook){
     if(!notebook) return;
     $scope.current = notebook;
+    $scope.currents = [$scope.current]
     // $scope.initAllMarkdownCells(notebook);
     // $scope.initAllCodeCells(notebook)
   }
