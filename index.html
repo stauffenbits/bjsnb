@@ -134,12 +134,12 @@
                                 
                                 <br>
                                 
-                                <label class="w-100 text-truncate" ng-if="cell.cell_type == 'code' && cell.output[0]">
-                                    {{cell.output[0]}}
+                                <label class="w-100 text-truncate" ng-if="cell.cell_type == 'code' && cell.outputs[0]">
+                                    {{cell.outputs[0]}}
                                 </label>
 
                                 
-                                <div ng-if="isArray(cell.output[0]) && cell.cell_type == 'code'" ng-init="collapsed_array = true" ng-show="isArray(cell.output[0])">
+                                <div ng-if="isArray(cell.outputs[0]) && cell.cell_type == 'code'" ng-init="collapsed_array = true" ng-show="isArray(cell.outputs[0])">
                                     Table [
                                     <a
                                         ng-name="showHide{{$index}}" 
@@ -158,7 +158,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr ng-repeat="value in cell.output[0] track by $index">
+                                            <tr ng-repeat="value in cell.outputs[0] track by $index">
                                                 <td class="text-secondary">{{$index}}</td>
                                                 <td class="text">{{value}}</td>
                                             </tr>
@@ -166,7 +166,7 @@
                                     </table>
                                 </div>
                                 
-                                <div ng-if="isObject(cell.output[0]) && !isArray(cell.output[0]) && cell.cell_type == 'code'" ng-init="collapsed_object = true">
+                                <div ng-if="isObject(cell.outputs[0]) && !isArray(cell.outputs[0]) && cell.cell_type == 'code'" ng-init="collapsed_object = true">
                                     Object Listing: [
                                     <a
                                         ng-name="showHide{{$index}}" 
@@ -185,9 +185,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr ng-repeat="(key, value) in cell.output[0]">
+                                            <tr ng-repeat="(key, value) in cell.outputs[0]">
                                                 <td class="text-secondary">{{key}}</td>
-                                                <td class="text">{{cell.output[0][key]}}</td>
+                                                <td class="text">{{cell.outputs[0][key]}}</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -195,7 +195,7 @@
                                 
                                 
                                 <div 
-                                     ng-if="isVega(cell.output[0]) && cell.cell_type == 'code'" 
+                                     ng-if="isVega(cell.outputs[0]) && cell.cell_type == 'code'" 
                                      class="flex-fill" 
                                      ng-init="collapsed_vis = true">
                                     Visualization: [
