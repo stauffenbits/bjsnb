@@ -45,7 +45,6 @@ var RSNBController = RSNBApp.controller("RSNBController",
           return line;
         }
       });
-      delete cellCopy.outputs;
       delete cellCopy.cellSource;
       delete cellCopy.index;
       delete cellCopy.editor;
@@ -313,7 +312,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
       
   $scope.visualize = function(cell){
-    if(isVega(cell.outputs[0]))
+    if($scope.isVega(cell.outputs[0]))
     vegaEmbed(`.output${cell.index}`, cell.outputs[0]).then(result => {
       cell.visualization = result;
     })
