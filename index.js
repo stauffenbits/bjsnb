@@ -50,6 +50,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       delete cellCopy.editor;
       delete cellCopy.execution_count;
       delete cellCopy.visualization;
+      cellCopy.outputs = [];
         
       return cellCopy;
     });
