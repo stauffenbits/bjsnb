@@ -264,7 +264,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
 
   $scope.getOutput = function(cell){
-    return cell.outputs.length ? cell.outputs[0].data['application/json'].json : undefined;
+    return cell.outputs.length ? cell.outputs[0].data : undefined;
   }
     
   $scope.runAll = function(notebook){
