@@ -222,10 +222,11 @@ var RSNBController = RSNBApp.controller("RSNBController",
         "name" : "Javascript",
         "version": "262",
         "codemirror_mode": "javascript"
+      }
      },
      "nbformat": 4,
      "nbformat_minor": 4
-    };  
+    }
       
     notebook.name = name;
       
