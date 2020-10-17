@@ -252,13 +252,9 @@ var RSNBController = RSNBApp.controller("RSNBController",
     var result = window.eval(code);
       
     var output = {
-      "output_type" : "execute_result",
+      "output_type" : "application/json",
       "execution_count": 42,
-      "data" : {
-        "application/json": {
-          "json": result,
-        },
-      },
+      "data" : result
       "metadata": {}
     };
       
@@ -337,7 +333,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
   $scope.hideVisualiation = function(cell){
     if(cell.visualization){
-      delete.cell.visualization;
+    
     }
   }
       
