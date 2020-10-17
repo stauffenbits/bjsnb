@@ -329,15 +329,15 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
       
   $scope.visualize = function(cell){
-    if($scope.isVega(cell.outputs[0]))
-    vegaEmbed(`.output${cell.index}`, cell.outputs[0]).then(result => {
+    if($scope.isVega($scope.getOutput(cell)))
+    vegaEmbed(`.output${cell.index}`, $scope.getOutput(cell)).then(result => {
       cell.visualization = result;
     })
   }
       
   $scope.hideVisualiation = function(cell){
     if(cell.visualization){
-        
+    
     }
   }
       
