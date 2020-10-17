@@ -250,9 +250,25 @@ var RSNBController = RSNBApp.controller("RSNBController",
     if(cell.cell_type != 'code') return;
     cell.source = code.split($scope.newline);
     var result = window.eval(code);
-    cell.outputs = [result];
+      
+    var output = {
+      "output_type" : "execute_result",
+      "execution_count": 42,
+      "data" : {
+        "application/json": {
+          "json": result,
+        },
+      },
+      "metadata": {}
+    };
+      
+    cell.outputs = [output];
     cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
     return result;
+  }
+
+  $scope.getOutput = function(cell){
+    return cell.outputs.length ? cell.outputs[0].data['application/json'].json : undefined;
   }
     
   $scope.runAll = function(notebook){
