@@ -215,16 +215,13 @@ var RSNBController = RSNBApp.controller("RSNBController",
       }
      ],
      "metadata": {
-      "kernelspec": {
-       "display_name": "Javascript (Browser)",
-       "language": "javascript",
-       "name": "javascript"
+      "kernel_info": {
+       "name": "Javascript (Browser)"
       },
       "language_info": {
-       "file_extension": ".js",
-       "mimetype": "application/javascript",
-       "name": "javascript"
-      },
+        "name" : "Javascript",
+        "version": "262",
+        "codemirror_mode": "javascript"
      },
      "nbformat": 4,
      "nbformat_minor": 4
