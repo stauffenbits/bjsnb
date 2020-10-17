@@ -254,7 +254,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     var output = {
       "output_type" : "application/json",
       "execution_count": 42,
-      "data" : result
+      "data" : result,
       "metadata": {}
     };
       
