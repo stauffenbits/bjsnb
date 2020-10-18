@@ -1,0 +1,1903 @@
+{
+  "@types/clone@2.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/@types/clone",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/@types/clone/LICENSE"
+  },
+  "@types/fast-json-stable-stringify@2.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/@types/fast-json-stable-stringify",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/@types/fast-json-stable-stringify/LICENSE"
+  },
+  "abbrev@1.1.1": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/abbrev-js",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/abbrev",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/abbrev/LICENSE"
+  },
+  "angular-markdown-editor@2.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ghiscoding/angular-markdown-editor",
+    "publisher": "Ghislain B.",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/angular-markdown-editor",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/angular-markdown-editor/LICENSE"
+  },
+  "angular-ui-codemirror@0.3.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/angular-ui/ui-codemirror",
+    "publisher": "https://github.com/angular-ui/ui-codemirror/contributors",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/angular-ui-codemirror",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/angular-ui-codemirror/LICENSE"
+  },
+  "angular@1.8.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/angular/angular.js",
+    "publisher": "Angular Core Team",
+    "email": "angular-core+npm@google.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/angular",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/angular/LICENSE.md"
+  },
+  "ansi-regex@5.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chalk/ansi-regex",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/ansi-regex",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/ansi-regex/license"
+  },
+  "ansi-styles@4.3.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chalk/ansi-styles",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/ansi-styles",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/ansi-styles/license"
+  },
+  "arr-diff@4.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/arr-diff",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/arr-diff",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/arr-diff/LICENSE"
+  },
+  "arr-flatten@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/arr-flatten",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/arr-flatten",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/arr-flatten/LICENSE"
+  },
+  "arr-union@3.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/arr-union",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/arr-union",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/arr-union/LICENSE"
+  },
+  "array-each@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/array-each",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/array-each",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/array-each/LICENSE"
+  },
+  "array-flat-polyfill@1.0.1": {
+    "licenses": "CC0-1.0",
+    "repository": "https://github.com/jonathantneal/array-flat-polyfill",
+    "publisher": "Jonathan Neal",
+    "email": "jonathantneal@hotmail.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/array-flat-polyfill",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/array-flat-polyfill/LICENSE.md"
+  },
+  "array-slice@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/array-slice",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/array-slice",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/array-slice/LICENSE"
+  },
+  "array-unique@0.3.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/array-unique",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/array-unique",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/array-unique/LICENSE"
+  },
+  "assign-symbols@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/assign-symbols",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/assign-symbols",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/assign-symbols/LICENSE"
+  },
+  "atob@2.1.2": {
+    "licenses": "(MIT OR Apache-2.0)",
+    "repository": "git://git.coolaj86.com/coolaj86/atob.js",
+    "publisher": "AJ ONeal",
+    "email": "coolaj86@gmail.com",
+    "url": "https://coolaj86.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/atob",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/atob/LICENSE"
+  },
+  "base@0.11.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/node-base/base",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/base",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/base/LICENSE"
+  },
+  "bootstrap-markdown@2.10.0": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/toopay/bootstrap-markdown",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/bootstrap-markdown",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/bootstrap-markdown/LICENSE"
+  },
+  "bootstrap@3.4.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/twbs/bootstrap",
+    "publisher": "Twitter, Inc.",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/angular-markdown-editor/node_modules/bootstrap",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/angular-markdown-editor/node_modules/bootstrap/LICENSE"
+  },
+  "bootstrap@4.5.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/twbs/bootstrap",
+    "publisher": "The Bootstrap Authors",
+    "url": "https://github.com/twbs/bootstrap/graphs/contributors",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/bootstrap",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/bootstrap/LICENSE"
+  },
+  "braces@2.3.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/braces",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/braces",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/braces/LICENSE"
+  },
+  "cache-base@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/cache-base",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/cache-base",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/cache-base/LICENSE"
+  },
+  "class-utils@0.3.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/class-utils",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/class-utils",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/class-utils/LICENSE"
+  },
+  "cliui@7.0.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/yargs/cliui",
+    "publisher": "Ben Coe",
+    "email": "ben@npmjs.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/cliui",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/cliui/LICENSE.txt"
+  },
+  "clone@2.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/pvorb/node-clone",
+    "publisher": "Paul Vorbach",
+    "email": "paul@vorba.ch",
+    "url": "http://paul.vorba.ch/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/clone",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/clone/LICENSE"
+  },
+  "codemirror@5.58.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/codemirror/CodeMirror",
+    "publisher": "Marijn Haverbeke",
+    "email": "marijnh@gmail.com",
+    "url": "http://marijnhaverbeke.nl",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/codemirror",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/codemirror/LICENSE"
+  },
+  "collection-visit@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/collection-visit",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/collection-visit",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/collection-visit/LICENSE"
+  },
+  "color-convert@2.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Qix-/color-convert",
+    "publisher": "Heather Arthur",
+    "email": "fayearthur@gmail.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/color-convert",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/color-convert/LICENSE"
+  },
+  "color-name@1.1.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/colorjs/color-name",
+    "publisher": "DY",
+    "email": "dfcreative@gmail.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/color-name",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/color-name/LICENSE"
+  },
+  "commander@2.20.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tj/commander.js",
+    "publisher": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/commander",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/commander/LICENSE"
+  },
+  "component-emitter@1.3.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/component/emitter",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/component-emitter",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/component-emitter/LICENSE"
+  },
+  "copy-descriptor@0.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/copy-descriptor",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/copy-descriptor",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/copy-descriptor/LICENSE"
+  },
+  "core-js@2.6.11": {
+    "licenses": "MIT",
+    "repository": "https://github.com/zloirock/core-js",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/core-js",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/core-js/LICENSE"
+  },
+  "core-util-is@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/isaacs/core-util-is",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/core-util-is",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/core-util-is/LICENSE"
+  },
+  "d3-array@2.8.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-array",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-array",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-array/LICENSE"
+  },
+  "d3-color@2.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-color",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-color",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-color/LICENSE"
+  },
+  "d3-delaunay@5.3.0": {
+    "licenses": "ISC",
+    "repository": "https://github.com/d3/d3-delaunay",
+    "publisher": "Mike Bostock",
+    "url": "https://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-delaunay",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-delaunay/LICENSE"
+  },
+  "d3-dispatch@2.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-dispatch",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-dispatch",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-dispatch/LICENSE"
+  },
+  "d3-dsv@2.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-dsv",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-dsv",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-dsv/LICENSE"
+  },
+  "d3-force@2.1.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-force",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-force",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-force/LICENSE"
+  },
+  "d3-format@2.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-format",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-format",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-format/LICENSE"
+  },
+  "d3-geo-projection@3.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-geo-projection",
+    "publisher": "Mike Bostock",
+    "url": "https://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-geo-projection",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-geo-projection/LICENSE"
+  },
+  "d3-geo@2.0.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-geo",
+    "publisher": "Mike Bostock",
+    "url": "https://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-geo",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-geo/LICENSE"
+  },
+  "d3-hierarchy@2.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-hierarchy",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-hierarchy",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-hierarchy/LICENSE"
+  },
+  "d3-interpolate@2.0.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-interpolate",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-interpolate",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-interpolate/LICENSE"
+  },
+  "d3-path@2.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-path",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-path",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-path/LICENSE"
+  },
+  "d3-quadtree@2.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-quadtree",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-quadtree",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-quadtree/LICENSE"
+  },
+  "d3-scale@3.2.3": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-scale",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-scale",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-scale/LICENSE"
+  },
+  "d3-shape@2.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-shape",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-shape",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-shape/LICENSE"
+  },
+  "d3-time-format@3.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-time-format",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-time-format",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-time-format/LICENSE"
+  },
+  "d3-time@2.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-time",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-time",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-time/LICENSE"
+  },
+  "d3-timer@2.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/d3/d3-timer",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-timer",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/d3-timer/LICENSE"
+  },
+  "debug@2.6.9": {
+    "licenses": "MIT",
+    "repository": "https://github.com/visionmedia/debug",
+    "publisher": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/debug",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/debug/LICENSE"
+  },
+  "decode-uri-component@0.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/SamVerschueren/decode-uri-component",
+    "publisher": "Sam Verschueren",
+    "email": "sam.verschueren@gmail.com",
+    "url": "github.com/SamVerschueren",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/decode-uri-component",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/decode-uri-component/license"
+  },
+  "define-property@0.2.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/define-property",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/class-utils/node_modules/define-property",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/class-utils/node_modules/define-property/LICENSE"
+  },
+  "define-property@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/define-property",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/base/node_modules/define-property",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/base/node_modules/define-property/LICENSE"
+  },
+  "define-property@2.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/define-property",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/define-property",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/define-property/LICENSE"
+  },
+  "delaunator@4.0.1": {
+    "licenses": "ISC",
+    "repository": "https://github.com/mapbox/delaunator",
+    "publisher": "Vladimir Agafonkin",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/delaunator",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/delaunator/LICENSE"
+  },
+  "detect-file@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/doowb/detect-file",
+    "publisher": "Brian Woodward",
+    "url": "https://github.com/doowb",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/detect-file",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/detect-file/LICENSE"
+  },
+  "editor@0.1.0": {
+    "licenses": "MIT*",
+    "repository": "https://github.com/lepture/editor",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/editor",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/editor/README.md"
+  },
+  "emoji-regex@8.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mathiasbynens/emoji-regex",
+    "publisher": "Mathias Bynens",
+    "url": "https://mathiasbynens.be/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/emoji-regex",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/emoji-regex/LICENSE-MIT.txt"
+  },
+  "escalade@3.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/lukeed/escalade",
+    "publisher": "Luke Edwards",
+    "email": "luke.edwards05@gmail.com",
+    "url": "https://lukeed.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/escalade",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/escalade/license"
+  },
+  "expand-brackets@2.1.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/expand-brackets",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/expand-brackets",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/expand-brackets/LICENSE"
+  },
+  "expand-tilde@2.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/expand-tilde",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/expand-tilde",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/expand-tilde/LICENSE"
+  },
+  "extend-shallow@2.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/extend-shallow",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/braces/node_modules/extend-shallow",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/braces/node_modules/extend-shallow/LICENSE"
+  },
+  "extend-shallow@3.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/extend-shallow",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/extend-shallow",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/extend-shallow/LICENSE"
+  },
+  "extend@3.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/justmoon/node-extend",
+    "publisher": "Stefan Thomas",
+    "email": "justmoon@members.fsf.org",
+    "url": "http://www.justmoon.net",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/extend",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/extend/LICENSE"
+  },
+  "extglob@2.0.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/extglob",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/extglob",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/extglob/LICENSE"
+  },
+  "fast-deep-equal@3.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/epoberezkin/fast-deep-equal",
+    "publisher": "Evgeny Poberezkin",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fast-deep-equal",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fast-deep-equal/LICENSE"
+  },
+  "fast-json-patch@3.0.0-1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Starcounter-Jack/JSON-Patch",
+    "publisher": "Joachim Wester",
+    "email": "joachimwester@me.com",
+    "url": "http://www.starcounter.com/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fast-json-patch",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fast-json-patch/LICENSE.txt"
+  },
+  "fast-json-stable-stringify@2.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/epoberezkin/fast-json-stable-stringify",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fast-json-stable-stringify",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fast-json-stable-stringify/LICENSE"
+  },
+  "fill-range@4.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/fill-range",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fill-range",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fill-range/LICENSE"
+  },
+  "findup-sync@2.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/js-cli/node-findup-sync",
+    "publisher": "\"Cowboy\" Ben Alman",
+    "url": "http://benalman.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/findup-sync",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/findup-sync/README.md"
+  },
+  "fined@1.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/gulpjs/fined",
+    "publisher": "Gulp Team",
+    "email": "team@gulpjs.com",
+    "url": "http://gulpjs.com/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fined",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fined/LICENSE"
+  },
+  "flagged-respawn@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/gulpjs/flagged-respawn",
+    "publisher": "Gulp Team",
+    "email": "team@gulpjs.com",
+    "url": "http://gulpjs.com/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/flagged-respawn",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/flagged-respawn/LICENSE"
+  },
+  "font-awesome@4.7.0": {
+    "licenses": "(OFL-1.1 AND MIT)",
+    "repository": "https://github.com/FortAwesome/Font-Awesome",
+    "publisher": "Dave Gandy",
+    "email": "dave@fontawesome.io",
+    "url": "http://twitter.com/davegandy",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/font-awesome",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/font-awesome/README.md"
+  },
+  "for-in@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/for-in",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/for-in",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/for-in/LICENSE"
+  },
+  "for-own@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/for-own",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/for-own",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/for-own/LICENSE"
+  },
+  "fragment-cache@0.2.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/fragment-cache",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fragment-cache",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/fragment-cache/LICENSE"
+  },
+  "get-caller-file@2.0.5": {
+    "licenses": "ISC",
+    "repository": "https://github.com/stefanpenner/get-caller-file",
+    "publisher": "Stefan Penner",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/get-caller-file",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/get-caller-file/LICENSE.md"
+  },
+  "get-value@2.0.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/get-value",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/get-value",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/get-value/LICENSE"
+  },
+  "global-modules@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/global-modules",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/global-modules",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/global-modules/LICENSE"
+  },
+  "global-prefix@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/global-prefix",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/global-prefix",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/global-prefix/LICENSE"
+  },
+  "grunt-cli@1.3.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/gruntjs/grunt-cli",
+    "publisher": "Grunt Development Team",
+    "url": "http://gruntjs.com/development-team",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/grunt-cli",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/grunt-cli/README.md"
+  },
+  "grunt-known-options@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/gruntjs/grunt-known-options",
+    "publisher": "Grunt Development Team",
+    "url": "http://gruntjs.com/development-team",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/grunt-known-options",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/grunt-known-options/LICENSE"
+  },
+  "has-value@0.3.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/has-value",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/unset-value/node_modules/has-value",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/unset-value/node_modules/has-value/LICENSE"
+  },
+  "has-value@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/has-value",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/has-value",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/has-value/LICENSE"
+  },
+  "has-values@0.1.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/has-values",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/unset-value/node_modules/has-values",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/unset-value/node_modules/has-values/LICENSE"
+  },
+  "has-values@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/has-values",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/has-values",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/has-values/LICENSE"
+  },
+  "homedir-polyfill@1.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/doowb/homedir-polyfill",
+    "publisher": "Brian Woodward",
+    "url": "https://github.com/doowb",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/homedir-polyfill",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/homedir-polyfill/LICENSE"
+  },
+  "iconv-lite@0.4.24": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ashtuchkin/iconv-lite",
+    "publisher": "Alexander Shtuchkin",
+    "email": "ashtuchkin@gmail.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/iconv-lite",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/iconv-lite/LICENSE"
+  },
+  "inherits@2.0.4": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/inherits",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/inherits",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/inherits/LICENSE"
+  },
+  "ini@1.3.5": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/ini",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/ini",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/ini/LICENSE"
+  },
+  "interpret@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tkellen/node-interpret",
+    "publisher": "Tyler Kellen",
+    "url": "http://goingslowly.com/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/interpret",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/interpret/LICENSE"
+  },
+  "is-absolute@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-absolute",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-absolute",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-absolute/LICENSE"
+  },
+  "is-accessor-descriptor@0.1.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-accessor-descriptor",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-accessor-descriptor",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-accessor-descriptor/LICENSE"
+  },
+  "is-accessor-descriptor@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-accessor-descriptor",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/base/node_modules/is-accessor-descriptor",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/base/node_modules/is-accessor-descriptor/LICENSE"
+  },
+  "is-buffer@1.1.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/feross/is-buffer",
+    "publisher": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "http://feross.org/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-buffer",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-buffer/LICENSE"
+  },
+  "is-data-descriptor@0.1.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-data-descriptor",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-data-descriptor",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-data-descriptor/LICENSE"
+  },
+  "is-data-descriptor@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-data-descriptor",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/base/node_modules/is-data-descriptor",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/base/node_modules/is-data-descriptor/LICENSE"
+  },
+  "is-descriptor@0.1.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-descriptor",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-descriptor",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-descriptor/LICENSE"
+  },
+  "is-descriptor@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-descriptor",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/base/node_modules/is-descriptor",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/base/node_modules/is-descriptor/LICENSE"
+  },
+  "is-extendable@0.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-extendable",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-extendable",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-extendable/LICENSE"
+  },
+  "is-extendable@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-extendable",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/extend-shallow/node_modules/is-extendable",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/extend-shallow/node_modules/is-extendable/LICENSE"
+  },
+  "is-extglob@2.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-extglob",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-extglob",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-extglob/LICENSE"
+  },
+  "is-fullwidth-code-point@3.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/is-fullwidth-code-point",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-fullwidth-code-point",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-fullwidth-code-point/license"
+  },
+  "is-glob@3.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-glob",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-glob",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-glob/LICENSE"
+  },
+  "is-number@3.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-number",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-number",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-number/LICENSE"
+  },
+  "is-plain-object@2.0.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-plain-object",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-plain-object",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-plain-object/LICENSE"
+  },
+  "is-relative@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-relative",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-relative",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-relative/LICENSE"
+  },
+  "is-unc-path@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-unc-path",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-unc-path",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-unc-path/LICENSE"
+  },
+  "is-windows@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-windows",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-windows",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-windows/LICENSE"
+  },
+  "isarray@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/juliangruber/isarray",
+    "publisher": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/isarray",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/isarray/README.md"
+  },
+  "isexe@2.0.0": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/isexe",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/isexe",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/isexe/LICENSE"
+  },
+  "isobject@2.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/isobject",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/unset-value/node_modules/has-value/node_modules/isobject",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/unset-value/node_modules/has-value/node_modules/isobject/LICENSE"
+  },
+  "isobject@3.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/isobject",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/isobject",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/isobject/LICENSE"
+  },
+  "jquery@3.5.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jquery/jquery",
+    "publisher": "JS Foundation and other contributors",
+    "url": "https://github.com/jquery/jquery/blob/3.5.1/AUTHORS.txt",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/jquery",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/jquery/LICENSE.txt"
+  },
+  "json-stringify-pretty-compact@2.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/lydell/json-stringify-pretty-compact",
+    "publisher": "Simon Lydell",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/json-stringify-pretty-compact",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/json-stringify-pretty-compact/LICENSE"
+  },
+  "kind-of@3.2.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/kind-of",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-number/node_modules/kind-of",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-number/node_modules/kind-of/LICENSE"
+  },
+  "kind-of@4.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/kind-of",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/has-values/node_modules/kind-of",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/has-values/node_modules/kind-of/LICENSE"
+  },
+  "kind-of@5.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/kind-of",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-descriptor/node_modules/kind-of",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/is-descriptor/node_modules/kind-of/LICENSE"
+  },
+  "kind-of@6.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/kind-of",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/kind-of",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/kind-of/LICENSE"
+  },
+  "liftoff@2.5.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/js-cli/js-liftoff",
+    "publisher": "Tyler Kellen",
+    "url": "http://goingslowly.com/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/liftoff",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/liftoff/LICENSE"
+  },
+  "make-iterator@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/make-iterator",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/make-iterator",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/make-iterator/LICENSE"
+  },
+  "map-cache@0.2.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/map-cache",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/map-cache",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/map-cache/LICENSE"
+  },
+  "map-visit@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/map-visit",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/map-visit",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/map-visit/LICENSE"
+  },
+  "micromatch@3.1.10": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/micromatch",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/micromatch",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/micromatch/LICENSE"
+  },
+  "mixin-deep@1.3.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/mixin-deep",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/mixin-deep",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/mixin-deep/LICENSE"
+  },
+  "ms@2.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/zeit/ms",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/ms",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/ms/license.md"
+  },
+  "nanomatch@1.2.13": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/nanomatch",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/nanomatch",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/nanomatch/LICENSE"
+  },
+  "node-fetch@2.6.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/bitinn/node-fetch",
+    "publisher": "David Frank",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/node-fetch",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/node-fetch/LICENSE.md"
+  },
+  "nopt@4.0.3": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/nopt",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/nopt",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/nopt/LICENSE"
+  },
+  "object-copy@0.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/object-copy",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/object-copy",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/object-copy/LICENSE"
+  },
+  "object-visit@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/object-visit",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/object-visit",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/object-visit/LICENSE"
+  },
+  "object.defaults@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/object.defaults",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/object.defaults",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/object.defaults/LICENSE"
+  },
+  "object.map@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/object.map",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/object.map",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/object.map/LICENSE"
+  },
+  "object.pick@1.3.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/object.pick",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/object.pick",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/object.pick/LICENSE"
+  },
+  "os-homedir@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/os-homedir",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/os-homedir",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/os-homedir/license"
+  },
+  "os-tmpdir@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/os-tmpdir",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/os-tmpdir",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/os-tmpdir/license"
+  },
+  "osenv@0.1.5": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/osenv",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/osenv",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/osenv/LICENSE"
+  },
+  "parse-filepath@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/parse-filepath",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/parse-filepath",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/parse-filepath/LICENSE"
+  },
+  "parse-passwd@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/doowb/parse-passwd",
+    "publisher": "Brian Woodward",
+    "url": "https://github.com/doowb",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/parse-passwd",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/parse-passwd/LICENSE"
+  },
+  "pascalcase@0.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/pascalcase",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/pascalcase",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/pascalcase/LICENSE"
+  },
+  "path-parse@1.0.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jbgutierrez/path-parse",
+    "publisher": "Javier Blanco",
+    "email": "http://jbgutierrez.info",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/path-parse",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/path-parse/LICENSE"
+  },
+  "path-root-regex@0.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/regexhq/path-root-regex",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/path-root-regex",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/path-root-regex/LICENSE"
+  },
+  "path-root@0.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/path-root",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/path-root",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/path-root/LICENSE"
+  },
+  "posix-character-classes@0.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/posix-character-classes",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/posix-character-classes",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/posix-character-classes/LICENSE"
+  },
+  "process-nextick-args@2.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/calvinmetcalf/process-nextick-args",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/process-nextick-args",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/process-nextick-args/license.md"
+  },
+  "readable-stream@2.3.7": {
+    "licenses": "MIT",
+    "repository": "https://github.com/nodejs/readable-stream",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/readable-stream",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/readable-stream/LICENSE"
+  },
+  "rechoir@0.6.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tkellen/node-rechoir",
+    "publisher": "Tyler Kellen",
+    "url": "http://goingslowly.com/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/rechoir",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/rechoir/LICENSE"
+  },
+  "regex-not@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/regex-not",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/regex-not",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/regex-not/LICENSE"
+  },
+  "remotestoragejs@1.2.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/remotestorage/remotestorage.js",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/remotestoragejs",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/remotestoragejs/LICENSE"
+  },
+  "repeat-element@1.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/repeat-element",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/repeat-element",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/repeat-element/LICENSE"
+  },
+  "repeat-string@1.6.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/repeat-string",
+    "publisher": "Jon Schlinkert",
+    "url": "http://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/repeat-string",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/repeat-string/LICENSE"
+  },
+  "require-directory@2.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/troygoode/node-require-directory",
+    "publisher": "Troy Goode",
+    "email": "troygoode@gmail.com",
+    "url": "http://github.com/troygoode/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/require-directory",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/require-directory/LICENSE"
+  },
+  "resolve-dir@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/resolve-dir",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/resolve-dir",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/resolve-dir/LICENSE"
+  },
+  "resolve-url@0.2.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/lydell/resolve-url",
+    "publisher": "Simon Lydell",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/resolve-url",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/resolve-url/LICENSE"
+  },
+  "resolve@1.17.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/browserify/resolve",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/resolve",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/resolve/LICENSE"
+  },
+  "ret@0.1.15": {
+    "licenses": "MIT",
+    "repository": "https://github.com/fent/ret.js",
+    "publisher": "Roly Fentanes",
+    "url": "https://github.com/fent",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/ret",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/ret/LICENSE"
+  },
+  "rsnb@1.0.0": {
+    "licenses": "MIT",
+    "publisher": "Joshua Moore",
+    "email": "fine.bitstrings@pm.me",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/LICENSE"
+  },
+  "rw@1.3.3": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/mbostock/rw",
+    "publisher": "Mike Bostock",
+    "url": "http://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/rw",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/rw/LICENSE"
+  },
+  "safe-buffer@5.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/feross/safe-buffer",
+    "publisher": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "http://feross.org",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/safe-buffer",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/safe-buffer/LICENSE"
+  },
+  "safe-regex@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/substack/safe-regex",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/safe-regex",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/safe-regex/LICENSE"
+  },
+  "safer-buffer@2.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ChALkeR/safer-buffer",
+    "publisher": "Nikita Skovoroda",
+    "email": "chalkerx@gmail.com",
+    "url": "https://github.com/ChALkeR",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/safer-buffer",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/safer-buffer/LICENSE"
+  },
+  "semver@7.3.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/node-semver",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/semver",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/semver/LICENSE"
+  },
+  "set-value@2.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/set-value",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/set-value",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/set-value/LICENSE"
+  },
+  "snapdragon-node@2.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/snapdragon-node",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/snapdragon-node",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/snapdragon-node/LICENSE"
+  },
+  "snapdragon-util@3.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/snapdragon-util",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/snapdragon-util",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/snapdragon-util/LICENSE"
+  },
+  "snapdragon@0.8.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/snapdragon",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/snapdragon",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/snapdragon/LICENSE"
+  },
+  "source-map-resolve@0.5.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/lydell/source-map-resolve",
+    "publisher": "Simon Lydell",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/source-map-resolve",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/source-map-resolve/LICENSE"
+  },
+  "source-map-url@0.4.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/lydell/source-map-url",
+    "publisher": "Simon Lydell",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/source-map-url",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/source-map-url/LICENSE"
+  },
+  "source-map@0.5.7": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/mozilla/source-map",
+    "publisher": "Nick Fitzgerald",
+    "email": "nfitzgerald@mozilla.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/source-map",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/source-map/LICENSE"
+  },
+  "split-string@3.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/split-string",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/split-string",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/split-string/LICENSE"
+  },
+  "static-extend@0.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/static-extend",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/static-extend",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/static-extend/LICENSE"
+  },
+  "string-width@4.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/string-width",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/string-width",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/string-width/license"
+  },
+  "string_decoder@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/nodejs/string_decoder",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/string_decoder",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/string_decoder/LICENSE"
+  },
+  "strip-ansi@6.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chalk/strip-ansi",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/strip-ansi",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/strip-ansi/license"
+  },
+  "through2@2.0.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/rvagg/through2",
+    "publisher": "Rod Vagg",
+    "email": "r@va.gg",
+    "url": "https://github.com/rvagg",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/through2",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/through2/LICENSE.md"
+  },
+  "to-object-path@0.3.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/to-object-path",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/to-object-path",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/to-object-path/LICENSE"
+  },
+  "to-regex-range@2.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/to-regex-range",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/to-regex-range",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/to-regex-range/LICENSE"
+  },
+  "to-regex@3.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/to-regex",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/to-regex",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/to-regex/LICENSE"
+  },
+  "topojson-client@3.1.0": {
+    "licenses": "ISC",
+    "repository": "https://github.com/topojson/topojson-client",
+    "publisher": "Mike Bostock",
+    "url": "https://bost.ocks.org/mike",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/topojson-client",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/topojson-client/LICENSE"
+  },
+  "tslib@1.14.1": {
+    "licenses": "0BSD",
+    "repository": "https://github.com/Microsoft/tslib",
+    "publisher": "Microsoft Corp.",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/angular-markdown-editor/node_modules/tslib",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/angular-markdown-editor/node_modules/tslib/LICENSE.txt"
+  },
+  "tslib@2.0.3": {
+    "licenses": "0BSD",
+    "repository": "https://github.com/Microsoft/tslib",
+    "publisher": "Microsoft Corp.",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/tslib",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/tslib/LICENSE.txt"
+  },
+  "tv4@1.3.0": {
+    "licenses": [
+      "Public Domain",
+      "MIT"
+    ],
+    "repository": "https://github.com/geraintluff/tv4",
+    "publisher": "Geraint Luff",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/tv4",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/tv4/LICENSE.txt"
+  },
+  "unc-path-regex@0.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/regexhq/unc-path-regex",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/unc-path-regex",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/unc-path-regex/LICENSE"
+  },
+  "union-value@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/union-value",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/union-value",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/union-value/LICENSE"
+  },
+  "unset-value@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/unset-value",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/unset-value",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/unset-value/LICENSE"
+  },
+  "urix@0.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/lydell/urix",
+    "publisher": "Simon Lydell",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/urix",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/urix/LICENSE"
+  },
+  "use@3.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/use",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/use",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/use/LICENSE"
+  },
+  "util-deprecate@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/TooTallNate/util-deprecate",
+    "publisher": "Nathan Rajlich",
+    "email": "nathan@tootallnate.net",
+    "url": "http://n8.io/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/util-deprecate",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/util-deprecate/LICENSE"
+  },
+  "v8flags@3.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/gulpjs/v8flags",
+    "publisher": "Gulp Team",
+    "email": "team@gulpjs.com",
+    "url": "http://gulpjs.com/",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/v8flags",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/v8flags/LICENSE"
+  },
+  "vega-canvas@1.2.6": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-canvas",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-canvas/LICENSE"
+  },
+  "vega-crossfilter@4.0.5": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-crossfilter",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-crossfilter/LICENSE"
+  },
+  "vega-dataflow@5.7.3": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-dataflow",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-dataflow/LICENSE"
+  },
+  "vega-embed@6.12.2": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega-embed",
+    "publisher": "UW Interactive Data Lab",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-embed",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-embed/LICENSE"
+  },
+  "vega-encode@4.8.3": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-encode",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-encode/LICENSE"
+  },
+  "vega-event-selector@2.0.6": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Arvind Satyanarayan",
+    "url": "http://arvindsatya.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-event-selector",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-event-selector/LICENSE"
+  },
+  "vega-expression@3.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-expression",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-expression/LICENSE"
+  },
+  "vega-force@4.0.7": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-force",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-force/LICENSE"
+  },
+  "vega-format@1.0.4": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-format",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-format/LICENSE"
+  },
+  "vega-functions@5.8.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-functions",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-functions/LICENSE"
+  },
+  "vega-geo@4.3.7": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-geo",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-geo/LICENSE"
+  },
+  "vega-hierarchy@4.0.9": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-hierarchy",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-hierarchy/LICENSE"
+  },
+  "vega-label@1.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "UW Interactive Data Lab",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-label",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-label/LICENSE"
+  },
+  "vega-lite@4.17.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega-lite",
+    "publisher": "Dominik Moritz, Kanit \"Ham\" Wongsuphasawat, Arvind Satyanarayan, Jeffrey Heer",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-lite",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-lite/LICENSE"
+  },
+  "vega-loader@4.4.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-loader",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-loader/LICENSE"
+  },
+  "vega-parser@6.1.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-parser",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-parser/LICENSE"
+  },
+  "vega-projection@1.4.5": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-projection",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-projection/LICENSE"
+  },
+  "vega-regression@1.0.9": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-regression",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-regression/LICENSE"
+  },
+  "vega-runtime@6.1.3": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-runtime",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-runtime/LICENSE"
+  },
+  "vega-scale@7.1.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-scale",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-scale/LICENSE"
+  },
+  "vega-scenegraph@4.9.2": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-scenegraph",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-scenegraph/LICENSE"
+  },
+  "vega-schema-url-parser@2.1.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/schema",
+    "publisher": "Dominik Moritz",
+    "email": "domoritz@gmail.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-schema-url-parser",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-schema-url-parser/LICENSE"
+  },
+  "vega-selections@5.1.4": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Arvind Satyanarayan",
+    "url": "http://arvindsatya.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-selections",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-selections/LICENSE"
+  },
+  "vega-statistics@1.7.9": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-statistics",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-statistics/LICENSE"
+  },
+  "vega-themes@2.9.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega-themes",
+    "publisher": "UW Interactive Data Lab",
+    "url": "https://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-themes",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-themes/LICENSE"
+  },
+  "vega-time@2.0.4": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-time",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-time/LICENSE"
+  },
+  "vega-tooltip@0.24.2": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega-tooltip",
+    "publisher": "UW Interactive Data Lab",
+    "url": "https://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-tooltip",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-tooltip/LICENSE"
+  },
+  "vega-transforms@4.9.3": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-transforms",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-transforms/LICENSE"
+  },
+  "vega-typings@0.19.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Dominik Moritz",
+    "email": "domoritz@gmail.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-typings",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-typings/README.md"
+  },
+  "vega-util@1.16.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-util",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-util/LICENSE"
+  },
+  "vega-view-transforms@4.5.8": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-view-transforms",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-view-transforms/LICENSE"
+  },
+  "vega-view@5.9.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-view",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-view/LICENSE"
+  },
+  "vega-voronoi@4.1.5": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-voronoi",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-voronoi/LICENSE"
+  },
+  "vega-wordcloud@4.1.3": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "Jeffrey Heer",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-wordcloud",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega-wordcloud/LICENSE"
+  },
+  "vega@5.17.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/vega/vega",
+    "publisher": "UW Interactive Data Lab",
+    "url": "http://idl.cs.washington.edu",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vega/LICENSE"
+  },
+  "vinyl-paths@2.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/vinyl-paths",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vinyl-paths",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/vinyl-paths/license"
+  },
+  "webfinger.js@2.7.0": {
+    "licenses": "LGPL-3.0*",
+    "repository": "https://github.com/silverbucket/webfinger.js",
+    "publisher": "Nick Jennings",
+    "email": "nick@silverbucket.net",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/webfinger.js",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/webfinger.js/LICENSE"
+  },
+  "which@1.3.1": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/node-which",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/which",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/which/LICENSE"
+  },
+  "wrap-ansi@7.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chalk/wrap-ansi",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/wrap-ansi",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/wrap-ansi/license"
+  },
+  "xhr2@0.1.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/pwnall/node-xhr2",
+    "publisher": "Victor Costan",
+    "email": "victor@costan.us",
+    "url": "http://www.costan.us",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/webfinger.js/node_modules/xhr2",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/webfinger.js/node_modules/xhr2/LICENSE.txt"
+  },
+  "xhr2@0.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/pwnall/node-xhr2",
+    "publisher": "Victor Costan",
+    "email": "victor@costan.us",
+    "url": "http://www.costan.us",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/xhr2",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/xhr2/LICENSE.txt"
+  },
+  "xtend@4.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Raynos/xtend",
+    "publisher": "Raynos",
+    "email": "raynos2@gmail.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/xtend",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/xtend/LICENSE"
+  },
+  "y18n@5.0.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/yargs/y18n",
+    "publisher": "Ben Coe",
+    "email": "bencoe@gmail.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/y18n",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/y18n/LICENSE"
+  },
+  "yargs-parser@20.2.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/yargs/yargs-parser",
+    "publisher": "Ben Coe",
+    "email": "ben@npmjs.com",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/yargs-parser",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/yargs-parser/LICENSE.txt"
+  },
+  "yargs@16.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/yargs/yargs",
+    "path": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/yargs",
+    "licenseFile": "/home/thweeabacadabraalchemist/es.ipynb/node_modules/yargs/LICENSE"
+  }
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="LicenseApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>es.ipynb components and licenses</title>
+    </head>
+    <body ng-controller="LicenseController">
+      
+      <h3>Components and Licenses</h3>
+      <p>es.ipynb is possible thanks to the generous support of the developers of the listed components.</p>
+      <p>Also, thank you, internet fam!</p>
+      <div ng-repeat="license in licenses">
+        <a href="license.repository">{{license.repository}}</a>
+        {{license.licenses}}
+        <hr>
+      </div>
+
+      <!-- jquery angular html5 bootstrap -->
+      <!-- it's the jhab stack -->
+      <script src="../jquery.min.js"></script>
+      <script src="../bootstrap.min.js"></script>
+      <link rel="stylesheet" href="../bootstrap.min.css">
+
+      <script src="../angular.min.js"></script>
+      <script src="index.js"></script>
+    </body>
+</html>

@@ -329,9 +329,15 @@ var RSNBController = RSNBApp.controller("RSNBController",
     })
   }
       
+  $scope.visualizeAll = function(notebook){
+    notebook.cells.forEach(cell => {
+      $scope.visualize(cell);
+    })
+  }
+      
   $scope.hideVisualiation = function(cell){
     if(cell.visualization){
-    
+      delete cell.visualization;
     }
   }
       
