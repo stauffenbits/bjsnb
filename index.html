@@ -15,26 +15,26 @@
                 <div class="col-md-4">
                     <form class="notebook-menu form">
                         <input class="form-control" type="file" name="files[]" multiple />
-                        <button ng-click="upload()" class="form-control link text-secondary">Upload Notebook</button>
-                        <button ng-click="addNotebook()" class="form-control link text-secondary">New Notebook</button>
+                        <button ng-click="upload()" class="form-control link text-primary">Upload Notebook</button>
+                        <button ng-click="addNotebook()" class="form-control link text-primary">New Notebook</button>
                         
                         <a ng-if="current && location.href.startsWith('https://joshuamoore.dev') || location.href.startsWith('http://localhost') || location.href.startsWith('https://localhost')" class="form-control link text-primary" href="https://github.com/stauffenbits/es.ipynb">Source</a>
                     </form>
                     <ul class="notebook-menu list-group">
                         <hr>
-                        <a class="list-group-item form-control link text-success"
+                        <a class="list-group-item form-control link text-secondary"
                             name="runAll"
                             href="#runAll"
                             ng-click="runAll(current)">Run all cells</a>
-                        <a class="list-group-item form-control link text-success"
+                        <a class="list-group-item form-control link text-secondary"
                             name="remove"
                             href="#remove"
                             ng-click="removeNotebook(current)">Remove Notebook</a>
-                        <a class="list-group-item form-control link text-success" 
+                        <a class="list-group-item form-control link text-secondary" 
                             name="save"
                             ng-href="#save"
                             ng-click="storeNotebook(current)">Save Notebook</a>
-                        <a class="list-group-item form-control link text-success"
+                        <a class="list-group-item form-control link text-secondary"
                             name="download"
                             ng-href="#download"
                             ng-click="downloadNotebook(current)">Download Notebook</a>
@@ -68,18 +68,18 @@
 
                                 {<label>
                                     <input 
-                                      type="radio"
-                                      ng-model="cell.cell_type"
-                                      value="code">
-                                    code
+                                        type="radio"
+                                        ng-model="cell.cell_type"
+                                        value="markdown">
+                                    markdown
                                 </label>
 
                                 <label>
                                     <input 
                                       type="radio"
                                       ng-model="cell.cell_type"
-                                      value="markdown">
-                                    markdown
+                                      value="code">
+                                    code
                                 </label>
                             
                                 <label>
@@ -107,7 +107,7 @@
                                 </a>}
                                 
                                 {<a 
-                                    ng-show="cell.cell_type in ['code', 'external_code']"
+                                    ng-show="['code', 'external_code'].indexOf(cell.cell_type) > -1"
                                     name="#run{{$index}}"
                                     href="#run{{$index}}" 
                                     class="link text-success text-right" 

@@ -257,7 +257,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
       };
     } else {  //Others
       script.onload = function(){
-        callback();
+        callback(script.textContent);
       };
     }
 
@@ -285,15 +285,13 @@ var RSNBController = RSNBApp.controller("RSNBController",
 
       case 'external_code':
         cell.source = code;
-        var result = null;
+        $scope.loadScript(cell.source, function(code){
+          var result = window.eval(code);
 
-        var time = Date.now();
-        $scope.loadScript(cell.source, function(){
-          result = "done";
           var output = {
             "output_type" : "application/json",
             "execution_count": 0,
-            "data" : result,
+            "data": code.split($scope.newline),
             "metadata": {}
           }
 
