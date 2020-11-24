@@ -1,4 +1,33 @@
 .CodeMirror {
-  border: 1px solid #eee;
+  border-left: 1px solid #eee;
   height: auto;
+}
+
+.cm-header-1 {
+  font-size: 24px;
+}
+
+.cm-header-2 {
+  font-size: 20px;
+}
+
+.cm-header-3 {
+  font-size: 16px;
+}
+
+.cm-header-4 {
+  font-size: 14px;
+}
+
+.cm-header-5 {
+  font-size: 12px;
+}
+
+.cell.markdown + * .CodeMirror-line {
+  font-family: Nunito;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('fonts/Nunito-Regular.ttf');
 }
