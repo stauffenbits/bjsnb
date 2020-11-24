@@ -245,20 +245,23 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
     
   $scope.run = function(cell, code){
-    if(cell.cell_type != 'code') return;
-    cell.source = code.split($scope.newline);
-    var result = window.eval(code);
+    switch(cell.cell_type){
+      case 'code':
+        cell.source = code.split($scope.newline);
+        var result = window.eval(code);
       
-    var output = {
-      "output_type" : "application/json",
-      "execution_count": 42,
-      "data" : result,
-      "metadata": {}
-    };
+        var output = {
+          "output_type" : "application/json",
+          "execution_count": 42,
+          "data" : result,
+          "metadata": {}
+        };
       
-    cell.outputs = [output];
-    cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
-    return result;
+        cell.outputs = [output];
+        cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
+        return result;
+      }
+      break;
   }
 
   $scope.getOutput = function(cell){
