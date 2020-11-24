@@ -243,6 +243,28 @@ var RSNBController = RSNBApp.controller("RSNBController",
     $scope.current = null;
     $scope.loadNotebooks();
   }
+
+  $scope.loadScript = function loadScript(url, callback){
+    var script = document.createElement("script")
+    script.type = "text/javascript";
+    if (script.readyState){  //IE
+      script.onreadystatechange = function(){
+        if (script.readyState == "loaded" ||
+            script.readyState == "complete"){
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {  //Others
+      script.onload = function(){
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+    return 
+  }
     
   $scope.run = function(cell, code){
     switch(cell.cell_type){
@@ -259,9 +281,29 @@ var RSNBController = RSNBApp.controller("RSNBController",
       
         cell.outputs = [output];
         cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
-        return result;
-      }
-      break;
+        break;
+
+      case 'external_code':
+        cell.source = code;
+        var result = null;
+
+        var time = Date.now();
+        $scope.loadScript(cell.source, function(){
+          result = "done";
+          var output = {
+            "output_type" : "application/json",
+            "execution_count": 0,
+            "data" : result,
+            "metadata": {}
+          }
+
+          cell.outputs = [output];
+          cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
+        })
+        break;
+    }
+
+    return result;
   }
 
   $scope.getOutput = function(cell){

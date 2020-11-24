@@ -107,7 +107,7 @@
                                 </a>}
                                 
                                 {<a 
-                                    ng-show="cell.cell_type == 'code'"
+                                    ng-show="cell.cell_type in ['code', 'external_code']"
                                     name="#run{{$index}}"
                                     href="#run{{$index}}" 
                                     class="link text-success text-right" 
@@ -134,6 +134,13 @@
                                     ng-model="cell.cellSource"
                                     ng-init="cell.cellSource = cell.cellSource ? cell.cellSource : cell.source.join('').trim();"
                                     class="form-control cell markdown cell{{$index}}"
+                                    ng-keyup="cell.source = cell.cellSource.split(newline);">
+                                </textarea>
+
+                                <input ng-if="cell.cell_type === 'external_code'"
+                                    ng-model="cell.cellSource"
+                                    ng-init="cell.cellSource = cell.cellSource ? cell.cellSource : cell.source.join('').trim();"
+                                    class="form-control cell cell{{$index}}"
                                     ng-keyup="cell.source = cell.cellSource.split(newline);">
                                 </textarea>
                                 
