@@ -48,21 +48,22 @@
                         ng-repeat="notebook in notebooks track by $index"
                         ng-init="notebook.index = $index"
                         class="form notebook notebook{{$index}}">
-                        
-                        <ul
-                            class="list-group">                            
+                                                
                             
-                            <li class="list-group-item">
-                                <h3 class="form-header" href="#">{{notebook.name}}</h3>
-                            </li>
+                        <li class="list-group-item">
+                            <h3 class="form-header" href="#">{{notebook.name}}</h3>
+                        </li>
 
-                            <a 
-                                ng-name="addCellAt{{$index}}}"
-                                ng-href="#addCellAt{{$index}}"
-                                class="link text-secondary"
-                                ng-click="addCellAt(notebook, $index)">
-                                { add cell here }
-                            </a>
+                        <a 
+                            ng-name="addCellAt{{$index}}}"
+                            ng-href="#addCellAt{{$index}}"
+                            class="link text-secondary"
+                            ng-click="addCellAt(notebook, $index)">
+                            { add cell here }
+                        </a>
+
+                        <ul id="cells"
+                            class="list-group">    
                                                       
                             <li class="list-group-item" ng-repeat="cell in notebook.cells track by $index" ng-init="cell.index = $index">
 
