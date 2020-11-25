@@ -245,62 +245,66 @@ var RSNBController = RSNBApp.controller("RSNBController",
   }
 
   $scope.loadScript = function loadScript(url, callback){
-    var script = document.createElement("script")
+    var script = document.createElement("script");
     script.type = "text/javascript";
     if (script.readyState){  //IE
       script.onreadystatechange = function(){
         if (script.readyState == "loaded" ||
             script.readyState == "complete"){
           script.onreadystatechange = null;
-          callback();
+          callback(script.src);
         }
       };
     } else {  //Others
       script.onload = function(){
-        callback(script.textContent);
+        callback(script.src);
       };
     }
 
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
-    return 
+    return script.src;
   }
     
-  $scope.run = function(cell, code){
-    switch(cell.cell_type){
-      case 'code':
-        cell.source = code.split($scope.newline);
-        var result = window.eval(code);
-      
-        var output = {
-          "output_type" : "application/json",
-          "execution_count": 42,
-          "data" : result,
-          "metadata": {}
-        };
-      
-        cell.outputs = [output];
-        cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
-        break;
-
-      case 'external_code':
-        cell.source = code;
-        $scope.loadScript(cell.source, function(code){
+  $scope.run = async function(cell, code){
+    var resultPr = new Promise((resolve, reject) => {
+      switch(cell.cell_type){
+        case 'code':
+          cell.source = code.split($scope.newline);
           var result = window.eval(code);
-
+        
           var output = {
             "output_type" : "application/json",
-            "execution_count": 0,
-            "data": code.split($scope.newline),
+            "execution_count": 42,
+            "data" : result,
             "metadata": {}
-          }
-
+          };
+        
           cell.outputs = [output];
           cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
-        })
-        break;
-    }
+          resolve(result)
+          break;
 
+        case 'external_code':
+          cell.source = code;
+          $scope.loadScript(cell.source, function(code){
+            var result = window.eval(code);
+            var output = {
+              "output_type" : "application/json",
+              "execution_count": 0,
+              "data": code.split($scope.newline),
+              "metadata": {}
+            }
+
+            cell.outputs = [output];
+            cell.execution_count = cell.execution_count === null ? 0 : cell.execution_count + 1;
+            resolve(result);
+          })
+          break;
+      }
+    })
+
+    var result = await resultPr;
     return result;
   }
 
