@@ -314,7 +314,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
     
   $scope.runAll = function(notebook){
     notebook.cells = notebook.cells.map(function(cell){
-      if(cell.cell_type == 'code'){
+      if(cell.cell_type == 'code' || 'external_code'){
         $scope.run(cell, cell.cellSource);
       }
       return cell;
