@@ -266,12 +266,12 @@ var RSNBController = RSNBApp.controller("RSNBController",
     return script.src;
   }
     
-  $scope.run = async function(cell, code){
+  $scope.run = async function(cell, outerCode){
     var resultPr = new Promise((resolve, reject) => {
       switch(cell.cell_type){
         case 'code':
           cell.source = code.split($scope.newline);
-          var result = window.eval(code);
+          var result = window.eval(outerCode);
         
           var output = {
             "output_type" : "application/json",
@@ -286,8 +286,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
           break;
 
         case 'external_code':
-          cell.source = code;
-          $scope.loadScript(cell.source, function(code){
+          $scope.loadScript(outerCode, function(code){
             var result = window.eval(code);
             var output = {
               "output_type" : "application/json",
@@ -339,7 +338,7 @@ var RSNBController = RSNBApp.controller("RSNBController",
        "metadata": {},
        "outputs": [],
        "source": []
-      })
+      });
   }
       
   $scope.addCellAt = function(notebook, i){
